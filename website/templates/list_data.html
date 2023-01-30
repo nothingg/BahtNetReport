@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+
+{% block content %}
+
+<h1 align="center"> Notes</h1>
+<div class="table-responsive-md">
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">cs_ref</th>
+        <th scope="col">instruction_id</th>
+        <th scope="col">mt</th>
+        <th scope="col">ctgypurp</th>
+        <th scope="col">dr_bic</th>
+        <th scope="col">dr_acct</th>
+        <th scope="col">cr_bic</th>
+        <th scope="col">cr_acct</th>
+        <th scope="col">dr_amt</th>
+        <th scope="col">cr_amt</th>
+        <th scope="col">status</th>
+        <th scope="col">error</th>
+        <th scope="col">time</th>
+        <th scope="col">ch</th>
+        <th scope="col">transmission_type</th>
+        <th scope="col">debtor_acct</th>
+        <th scope="col">debtor_name</th>
+        <th scope="col">creditor_acct</th>
+        <th scope="col">creditor_name</th>
+        <th scope="col">dept</th>
+    </tr>
+  </thead>
+  <tbody>
+     {% for index, row in data.iterrows() %}
+
+    <tr>
+        <th scope="row">{{ index + 1}}</th>
+        <td> {{ row.cs_ref}} </td>
+        <td> {{ row.instduction_id }} </td>
+        <td> {{ row.mt}} </td>
+        <td> {{ row.ctgypurp}} </td>
+        <td> {{ row.dr_bic}} </td>
+        <td> {{ row.dr_acct}} </td>
+        <td> {{ row.cr_bic}} </td>
+        <td> {{ row.cr_acct}} </td>
+        <td> {{ row.dr_amt}} </td>
+        <td> {{ row.cr_amt}} </td>
+        <td> {{ row.status}} </td>
+        <td> {{ row.error}} </td>
+        <td> {{ row.time}} </td>
+        <td> {{ row.ch}} </td>
+        <td> {{ row.tdansmission_type}} </td>
+        <td> {{ row.debtor_acct}} </td>
+        <td> {{ row.debtor_name}} </td>
+        <td> {{ row.creditor_acct}} </td>
+        <td> {{ row.creditor_name}} </td>
+        <td> {{ row.dept}} </td>
+    </tr>
+    {% endfor%}
+  </tbody>
+</table>
+</div>
+
+<style>
+.table-responsive-md {
+  max-height: 500px;
+  overflow-y: auto;
+}
+</style>
+{% endblock %}

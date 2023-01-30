@@ -39,5 +39,4 @@ if df['dr_amt'].notnull().values.any():
 if df['cr_amt'].notnull().values.any():
         df['cr_amt'] = df['dr_amt'].str.replace(",", "").astype(float)
 
-
 df.to_sql('reports', engine, if_exists='append', index=False)
