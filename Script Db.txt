@@ -1,0 +1,23 @@
+
+CREATE TABLE public.reports (
+	cs_ref varchar NULL,
+	instruction_id varchar NULL,
+	mt varchar NULL,
+	ctgypurp varchar NULL,
+	dr_bic varchar NULL,
+	dr_acct varchar NULL,
+	cr_bic varchar NULL,
+	cr_acct varchar NULL,
+	dr_amt varchar NULL,
+	cr_amt varchar NULL,
+	status varchar NULL,
+	error varchar NULL,
+	"time" varchar NULL,
+	ch varchar NULL,
+	transmission_type varchar NULL,
+	debtor_acct varchar NULL,
+	debtor_name varchar NULL,
+	creditor_acct varchar NULL,
+	creditor_name varchar NULL,
+	dept varchar NULL
+);
