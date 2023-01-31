@@ -28,6 +28,8 @@
         <th scope="col">creditor_acct</th>
         <th scope="col">creditor_name</th>
         <th scope="col">dept</th>
+        <th scope="col"></th>
+
     </tr>
   </thead>
   <tbody>
@@ -43,7 +45,7 @@
         <td> {{ row.dr_acct}} </td>
         <td> {{ row.cr_bic}} </td>
         <td> {{ row.cr_acct}} </td>
-        <td> {{ row.dr_amt}} </td>
+        <td> {{ row.dr_amt }} </td>
         <td> {{ row.cr_amt}} </td>
         <td> {{ row.status}} </td>
         <td> {{ row.error}} </td>
@@ -55,6 +57,10 @@
         <td> {{ row.creditor_acct}} </td>
         <td> {{ row.creditor_name}} </td>
         <td> {{ row.dept}} </td>
+        <td>
+            <a href="/edit/{{ row.cs_ref }}" class="btn btn-warning btn-xs">Edit</a>
+            <a href="/delete/{{ row.0 }}" class="btn btn-danger btn-xs" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
+        </td>
     </tr>
     {% endfor%}
   </tbody>
