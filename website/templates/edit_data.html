@@ -2,23 +2,23 @@
 
 {% block content %}
 
-<form>
+<form action="{{ url_for('views.update') }}" method="post">
     <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">cs_ref</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" value="{{ data.cs_ref}}">
+          <input type="text" class="form-control" value="{{ data.cs_ref}}" name="cs_ref">
         </div>
     </div>
     <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">instduction_id</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" value="{{ data.instduction_id}}">
+          <input type="text" class="form-control" value="{{ data.instduction_id}}" name="instduction_id">
         </div>
     </div>
     <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">mt</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" value="{{ data.mt}}">
+          <input type="text" class="form-control" value="{{ data.mt}}" name="mt">
         </div>
     </div>
     <div class="row mb-3">
@@ -108,7 +108,7 @@
     <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">debtor_name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" value="{{ data.debtor_name}}">
+          <input type="text" class="form-control" value="{{ data.debtor_name}}" name="debtor_name">
         </div>
     </div>
      <div class="row mb-3">
@@ -120,7 +120,7 @@
      <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">creditor_name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" value="{{ data.creditor_name}}">
+          <input type="text" class="form-control" value="{{ data.creditor_name}}" name="creditor_name">
         </div>
     </div>
     <div class="row mb-3">
