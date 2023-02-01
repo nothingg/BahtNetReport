@@ -1,8 +1,13 @@
 from flask import Blueprint , render_template ,request , flash , jsonify , redirect , url_for
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker , declarative_base
+
 from sqlalchemy.sql import text
 import pandas as pd
 import locale
+
+
+from .models import Report
 
 
 # create a connection to the database
@@ -32,12 +37,29 @@ def edit_data(id_data):
     with engine.connect().execution_options(autocommit=True) as conn:
         query = conn.execute(text(sql))
     df = pd.DataFrame(query.fetchall())
-
+    df.fillna('', inplace=True)
     df.loc[0]
     # df.head(1)
 
 
     return render_template('edit_data.html',data=df.loc[0])
+
+@views.route("/update_orm" , methods=['POST'])
+def update_orm():
+    Base = declarative_base()
+    Base.metadata.create_all(engine)
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    rs = session.get(Report, request.form['cs_ref'])
+    rs.debtor_name = request.form['debtor_name']
+    rs.dept = request.form['dept']
+
+    session.commit()
+    session.close()
+
+    return redirect(url_for('views.list_data'))
 
 
 

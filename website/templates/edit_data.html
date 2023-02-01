@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="{{ url_for('views.update') }}" method="post">
+<form action="{{ url_for('views.update_orm') }}" method="post">
     <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">cs_ref</label>
         <div class="col-sm-10">
@@ -12,7 +12,7 @@
     <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">instduction_id</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" value="{{ data.instduction_id}}" name="instduction_id">
+          <input type="text" class="form-control" value="{{ data.instruction_id}}" name="instruction_id">
         </div>
     </div>
     <div class="row mb-3">
@@ -126,7 +126,7 @@
     <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">dept</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" value="{{ data.dept}}">
+          <input type="text" class="form-control" value="{{ data.dept}}" name="dept">
         </div>
     </div>
      <button type="submit" class="btn btn-primary">Sign in</button>

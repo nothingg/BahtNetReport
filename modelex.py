@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine, Column, Integer, String
 
 from sqlalchemy.orm import sessionmaker
-# from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
@@ -40,6 +39,16 @@ session = Session()
 
 result = session.query(Report).filter(Report.cs_ref == "230117017680").all()
 for report in result:
-    print(report.cs_ref, report.instruction_id ,report.time )
+    print(report.cs_ref, report.instruction_id ,report.debtor_name )
 
-rs = session.query(Report).get("230117017680")
+rs = session.get(Report,"230117017680")
+# rs = session.query(Report).get("230117017680")
+rs.debtor_name = "KASETSART UNIVERSITY SAVINGS AND CREDIT CO-OPERATIVE LIMITED BY MFC ASSET MANAGEMENT PCL 44"
+
+session.commit()
+
+rs = session.get(Report,"230117017680")
+
+print(rs.debtor_name)
+session.close()
+
