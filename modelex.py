@@ -41,3 +41,5 @@ session = Session()
 result = session.query(Report).filter(Report.cs_ref == "230117017680").all()
 for report in result:
     print(report.cs_ref, report.instruction_id ,report.time )
+
+rs = session.query(Report).get("230117017680")
