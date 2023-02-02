@@ -1,16 +1,26 @@
 from flask import Flask
-from os import path
+from flask_sqlalchemy import SQLAlchemy
 
 
-def create_app():
-    app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
-    # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'Hello Flask for Bahtnet report'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost:5432/postgres'
 
-    from .views import views
+db = SQLAlchemy(app)
 
+from website.routes import routes
+app.register_blueprint(routes, url_prefix='/')
 
-    app.register_blueprint(views, url_prefix='/')
-
-
-    return app
+#
+# def create_app():
+#     app = Flask(__name__)
+#     app.config['SECRET_KEY'] = 'Hello Flask for Bahtnet report'
+#     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost:5432/postgres'
+#
+#     from .views import views
+#
+#
+#     app.register_blueprint(views, url_prefix='/')
+#
+#
+#     return app

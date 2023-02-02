@@ -7,7 +7,7 @@ import pandas as pd
 import locale
 
 
-from .models import Report
+from .models import Reports
 
 
 # create a connection to the database
