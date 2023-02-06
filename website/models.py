@@ -25,7 +25,7 @@ class Reports(db.Model):
     dept = db.Column(db.String)
 
     def __repr__(self):
-        return "<Reports : "+ str(self.dept)
+        return "<Reports : "+ str(self.instruction_id)
 
 
 # Base = declarative_base()

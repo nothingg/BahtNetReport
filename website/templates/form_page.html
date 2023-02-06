@@ -1,0 +1,136 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+
+{% block content %}
+
+<form action="{{ url_for('routes.update') }}" method="post">
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cs_ref</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.cs_ref}}" name="cs_ref">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">instduction_id</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.instruction_id}}" name="instruction_id">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">mt</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.mt}}" name="mt">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">ctgypurp</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.ctgypurp}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_bic</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.dr_bic}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_bic</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.dr_bic}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.dr_acct}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_bic</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.cr_bic}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.cr_acct}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_amt</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.dr_amt}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_amt</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.cr_amt}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">status</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.status}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">error</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.error}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">time</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.time}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">ch</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.ch}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">tdansmission_type</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.tdansmission_type}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">debtor_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.debtor_acct}}">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">debtor_name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.debtor_name}}" name="debtor_name">
+        </div>
+    </div>
+     <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">creditor_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.creditor_acct}}">
+        </div>
+    </div>
+     <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">creditor_name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.creditor_name}}" name="creditor_name">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dept</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{ data.dept}}" name="dept">
+        </div>
+    </div>
+     <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+
+
+{% endblock %}

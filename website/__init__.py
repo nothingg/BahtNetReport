@@ -11,6 +11,7 @@ db = SQLAlchemy(app)
 from website.routes import routes
 app.register_blueprint(routes, url_prefix='/')
 
+
 #
 # def create_app():
 #     app = Flask(__name__)
