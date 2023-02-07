@@ -20,6 +20,7 @@
         <th scope="col">cr_amt</th>
         <th scope="col">status</th>
         <th scope="col">error</th>
+        <th scope="col">date</th>
         <th scope="col">time</th>
         <th scope="col">ch</th>
         <th scope="col">transmission_type</th>
@@ -28,6 +29,7 @@
         <th scope="col">creditor_acct</th>
         <th scope="col">creditor_name</th>
         <th scope="col">dept</th>
+        <th scope="col">input_type</th>
         <th scope="col"></th>
 
     </tr>
@@ -38,7 +40,7 @@
     <tr>
         <th scope="row"></th>
         <td> {{ row.cs_ref}} </td>
-        <td> {{ row.instduction_id }} </td>
+        <td> {{ row.instruction_id }} </td>
         <td> {{ row.mt}} </td>
         <td> {{ row.ctgypurp}} </td>
         <td> {{ row.dr_bic}} </td>
@@ -49,7 +51,8 @@
         <td> {{ row.cr_amt}} </td>
         <td> {{ row.status}} </td>
         <td> {{ row.error}} </td>
-        <td> {{ row.time}} </td>
+        <td> {{ row.report_date}} </td>
+        <td> {{ row.report_time}} </td>
         <td> {{ row.ch}} </td>
         <td> {{ row.transmission_type}} </td>
         <td> {{ row.debtor_acct}} </td>
@@ -57,10 +60,13 @@
         <td> {{ row.creditor_acct}} </td>
         <td> {{ row.creditor_name}} </td>
         <td> {{ row.dept}} </td>
+        <td> {{ row.input_type }} </td>
         <td>
             <td>
             <a href="/form_page/{{ row.cs_ref }}" class="btn btn-warning btn-xs">Edit</a>
-            <a href="/delete/{{ row.0 }}" class="btn btn-danger btn-xs" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
+            {% if row.input_type != 'upload' %}
+                <a href="/delete/{{ row.cs_ref }}" class="btn btn-danger btn-xs" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
+            {% endif %}
         </td>
         </td>
     </tr>

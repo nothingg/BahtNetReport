@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Hello Flask for Bahtnet report'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost:5432/postgres'
+app.config['SQLALCHEMY_ECHO'] = True
 
 db = SQLAlchemy(app)
 

@@ -1,4 +1,8 @@
 from website import db
+import datetime
+import pytz
+
+thailand_tz = pytz.timezone("Asia/Bangkok")
 
 # create the extension
 class Reports(db.Model):
@@ -11,11 +15,10 @@ class Reports(db.Model):
     dr_acct = db.Column(db.String)
     cr_bic = db.Column(db.String)
     cr_acct = db.Column(db.String)
-    dr_amt = db.Column(db.String)
-    cr_amt = db.Column(db.String)
+    dr_amt = db.Column(db.Integer)
+    cr_amt = db.Column(db.Integer)
     status = db.Column(db.String)
     error = db.Column(db.String)
-    time = db.Column(db.String)
     ch = db.Column(db.String)
     transmission_type = db.Column(db.String)
     debtor_acct = db.Column(db.String)
@@ -23,6 +26,10 @@ class Reports(db.Model):
     creditor_acct = db.Column(db.String)
     creditor_name = db.Column(db.String)
     dept = db.Column(db.String)
+    report_date = db.Column(db.Date)
+    report_time = db.Column(db.Time)
+    created_date = db.Column(db.DateTime , default=lambda : datetime.datetime.now(thailand_tz))
+    input_type = db.Column(db.String)
 
     def __repr__(self):
         return "<Reports : "+ str(self.instruction_id)
