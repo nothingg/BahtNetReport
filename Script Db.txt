@@ -30,3 +30,5 @@ CREATE TABLE public.reports (
 	creditor_name varchar NULL,
 	dept varchar NULL
 );
+
+

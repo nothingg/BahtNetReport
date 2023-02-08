@@ -2,14 +2,12 @@ from website import app
 from flask import render_template, Blueprint, request, redirect, url_for , flash
 from website.models import Reports
 from website import db
+import datetime
+import pytz
 
 routes = Blueprint('routes',__name__)
 
-@routes.route('/insert_page')
-def insert_page():
-    item = Reports
-    print(item)
-    return render_template('form_page.html', data=item)
+
 
 @routes.route('/')
 def list_data():
@@ -20,11 +18,51 @@ def list_data():
     # items = db.session.scalar(select(Reports)).all()
     return render_template('list_data_orm.html',data = items)
 
+@routes.route('/form_insert')
+def form_insert():
 
-@routes.route('/form_page/<string:id_data>')
-def form_page(id_data):
+     return render_template('form_insert.html')
+
+@routes.route('/insert', methods=['GET','POST'])
+def insert():
+    if request.method == 'POST':
+        timezone = pytz.timezone("Asia/Bangkok")
+        current_time = datetime.datetime.now(timezone)
+
+        report = Reports(
+            cs_ref = request.form['cs_ref'],
+            instruction_id = request.form['instruction_id'],
+            mt = request.form['mt'],
+            ctgypurp = request.form['ctgypurp'],
+            dr_bic = request.form['dr_bic'],
+            dr_acct = request.form['dr_acct'],
+            cr_bic = request.form['cr_bic'],
+            cr_acct = request.form['cr_acct'],
+            dr_amt = float(request.form['dr_amt'])  if request.form['dr_amt'] else None ,
+            cr_amt = float(request.form['cr_amt']) if request.form['cr_amt'] else None ,
+            status = request.form['status'],
+            error = request.form['error'],
+            report_time = request.form['report_time'],
+            ch = request.form['ch'],
+            transmission_type = request.form['transmission_type'],
+            debtor_acct = request.form['debtor_acct'],
+            debtor_name = request.form['debtor_name'],
+            creditor_acct = request.form['creditor_acct'],
+            creditor_name = request.form['creditor_name'],
+            dept = request.form['dept'],
+            report_date = request.form['report_date'],
+            created_date = current_time,
+            input_type = 'input'
+        )
+        db.session.add(report)
+        db.session.commit()
+
+        return redirect(url_for('routes.list_data'))
+
+@routes.route('/form_update/<string:id_data>')
+def form_update(id_data):
      item = Reports.query.get(id_data)
-     return render_template('form_page.html', data=item)
+     return render_template('form_update.html', data=item)
 
 @routes.route('update' , methods=['GET','POST'])
 def update():
