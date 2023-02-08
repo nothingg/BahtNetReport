@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}Upload{% endblock %}
+
+{% block content %}
+
+<form action="" method="post"  enctype="multipart/form-data">
+<div>
+  <label for="formFileLg" class="form-label">Large file input example</label>
+  <input class="form-control form-control-lg" id="formFileLg" type="file" name="file_upload">
+
+</div>
+  <div class="col-12">
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+{% endblock %}

@@ -2,12 +2,15 @@ from website import app
 from flask import render_template, Blueprint, request, redirect, url_for , flash
 from website.models import Reports
 from website import db
-import datetime
+from datetime import datetime, time
+
+import os
+import pandas as pd
 import pytz
 
 routes = Blueprint('routes',__name__)
-
-
+timezone = pytz.timezone("Asia/Bangkok")
+current_time = datetime.now(timezone)
 
 @routes.route('/')
 def list_data():
@@ -18,6 +21,73 @@ def list_data():
     # items = db.session.scalar(select(Reports)).all()
     return render_template('list_data_orm.html',data = items)
 
+@routes.route('/upload' , methods=['GET','POST'])
+def upload_file():
+    if request.method == 'POST':
+        file = request.files['file_upload']
+
+        if file and file.filename != '' :
+            data = pd.read_csv(file, skiprows= 17)
+            # change the header of the dataframe
+            data = data.rename(columns={'CS Ref.': 'cs_ref',
+                                    'Instruction ID': 'instruction_id',
+                                    'MT': 'mt',
+                                    'CtgyPurp': 'ctgypurp',
+                                    'Dr BIC': 'dr_bic',
+                                    'Dr Acc': 'dr_acct',
+                                    'Cr BIC': 'cr_bic',
+                                    'Cr Acc': 'cr_acct',
+                                    'Dr Amt': 'dr_amt',
+                                    'Cr Amt': 'cr_amt',
+                                    'Status': 'status',
+                                    'Error': 'error',
+                                    'Time': 'time',
+                                    'CH': 'ch',
+                                    'Transmission Type': 'transmission_type',
+                                    'Debtor Acc': 'debtor_acct',
+                                    'Debtor Name': 'debtor_name',
+                                    'Creditor Acc': 'creditor_acct',
+                                    'Creditor Name': 'creditor_name'})
+
+            # remove single quotes from the first position of a column
+            data['instruction_id'] = data['instruction_id'].str.replace("^'", "", regex=True)
+            data['debtor_acct'] = data['debtor_acct'].str.replace("^'", "", regex=True)
+            data['creditor_acct'] = data['creditor_acct'].str.replace("^'", "", regex=True)
+
+            # check if there are any non-null values in a column
+            if data['dr_amt'].notnull().values.any():
+                data['dr_amt'] = data['dr_amt'].str.replace(",", "").astype(float)
+
+            if data['cr_amt'].notnull().values.any():
+                data['cr_amt'] = data['dr_amt'].str.replace(",", "").astype(float)
+
+            # covert Time
+            # replace '.' with ':'
+            data['column_to_convert'] = data['time'].str.replace('.', ':')
+
+            # convert string to time
+            data['report_time'] = pd.to_datetime(data['column_to_convert'], format='%H:%M:%S').dt.time
+
+            # delete the column_to_convert column
+            data = data.drop(['column_to_convert'], axis=1)
+
+            data['created_date'] = current_time
+            data['input_type'] = 'upload'
+
+
+
+            # Connect to your database using the SQLAlchemy engine
+            engine = db.engine
+
+            # Insert the data into the PostgreSQL database
+            data.to_sql('reports', engine, if_exists='append', index=False)
+
+            flash('Upload successful!', category='success')
+        else:
+            flash('Upload Fail', category='error')
+
+    return render_template('upload_transfer.html')
+
 @routes.route('/form_insert')
 def form_insert():
 
@@ -26,8 +96,7 @@ def form_insert():
 @routes.route('/insert', methods=['GET','POST'])
 def insert():
     if request.method == 'POST':
-        timezone = pytz.timezone("Asia/Bangkok")
-        current_time = datetime.datetime.now(timezone)
+
 
         report = Reports(
             cs_ref = request.form['cs_ref'],
