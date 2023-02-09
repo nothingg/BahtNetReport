@@ -63,13 +63,14 @@
         <td> {{ row.input_type }} </td>
         <td>
             <td>
-            <a href="/form_update/{{ row.cs_ref }}" class="btn btn-warning btn-xs">Edit</a>
-            {% if row.input_type != 'upload' %}
-                <a href="/delete/{{ row.cs_ref }}" class="btn btn-danger btn-xs" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
-            {% endif %}
-        </td>
+                <a href="/form_update/{{ row.cs_ref }}" class="btn btn-warning btn-xs">Edit</a>
+                {% if row.input_type != 'upload' %}
+                    <a href="/delete/{{ row.cs_ref }}" class="btn btn-danger btn-xs" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
+                {% endif %}
+            </td>
         </td>
     </tr>
+
     {% endfor%}
   </tbody>
 </table>

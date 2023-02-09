@@ -30,6 +30,8 @@ class Reports(db.Model):
     report_time = db.Column(db.Time)
     created_date = db.Column(db.DateTime , default=lambda : datetime.datetime.now(thailand_tz))
     input_type = db.Column(db.String)
+    amlo_is = db.Column(db.Boolean)
+    amlo_done = db.Column(db.Boolean)
 
     def __repr__(self):
         return "<Reports : "+ str(self.instruction_id)
