@@ -1,0 +1,143 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+
+{% block content %}
+
+
+<form action="{{ url_for('routes.insert') }}" method="post">
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cs_ref</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="cs_ref">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">instduction_id</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="instruction_id">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">mt</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="mt">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">ctgypurp</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="ctgypurp">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_bic</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="dr_bic">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="dr_acct">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_bic</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="cr_bic">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="cr_acct">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_amt</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="dr_amt">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_amt</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="cr_amt">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">status</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="status">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">error</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="error">
+        </div>
+    </div>
+     <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">report_date</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="report_date" placeholder="EX -> YYYY-mm-dd" required
+                 pattern="^\d{4}-\d{2}-\d{2}$"
+                 title="Format Date incorrect">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">report_time</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="report_time" placeholder="Ex -> HH:MM:ss" required
+                 pattern="^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                 title="Format Time incorrent">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">ch</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="ch">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">transmission_type</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="transmission_type">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">debtor_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="debtor_acct">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">debtor_name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="debtor_name">
+        </div>
+    </div>
+     <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">creditor_acct</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="creditor_acct">
+        </div>
+    </div>
+     <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">creditor_name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="creditor_name">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dept</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="dept">
+        </div>
+    </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/" class="btn btn-warning btn-xs">Back</a>
+</form>
+
+
+{% endblock %}

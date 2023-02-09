@@ -1,0 +1,996 @@
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(0, 'ธนาคารอาคารสงเคราะห์                              ', 'ธนาคารอาคารสงเคราะห์                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(100, 'ศูนย์พระราม 9                                     ', 'ศูนย์พระราม 9                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(200, 'สาขาราชดำเนิน                                     ', 'สาขาราชดำเนิน                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(300, 'สาขาเชียงใหม่                                     ', 'สาขาเชียงใหม่                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(301, 'OSS : หางดง                                       ', 'OSS : หางดง                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(302, 'BC : CENTRAL AIRPORT                              ', 'BC : CENTRAL AIRPORT                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(400, 'สาขาขอนแก่น                                       ', 'สาขาขอนแก่น                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(401, 'OSS: พล                                           ', 'OSS: พล                                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(500, 'สาขาดอนเมือง                                      ', 'สาขาดอนเมือง                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(501, 'BC : IT SQUARE หลักสี่พลาซา                       ', 'BC : IT SQUARE หลักสี่พลาซา                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(600, 'สาขาพัทยา                                         ', 'สาขาพัทยา                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(601, 'OSS : สัตหีบ                                      ', 'OSS : สัตหีบ                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(602, 'OSS : บางละมุง                                    ', 'OSS : บางละมุง                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(700, 'สาขาสุขาภิบาล 1                                   ', 'สาขาสุขาภิบาล 1                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(800, 'สาขาพระราม 6                                      ', 'สาขาพระราม 6                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(801, 'BC : JJ MALL                                      ', 'BC : JJ MALL                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(900, 'สาขาหนองแขม                                       ', 'สาขาหนองแขม                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1000, 'สาขาสำโรง                                         ', 'สาขาสำโรง                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1001, 'BC : อิมพิเรียลสำโรง                              ', 'BC : อิมพิเรียลสำโรง                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1100, 'สาขาพิษณุโลก                                      ', 'สาขาพิษณุโลก                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1200, 'สาขาหาดใหญ่                                       ', 'สาขาหาดใหญ่                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1300, 'สาขานครราชสีมา                                    ', 'สาขานครราชสีมา                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1301, 'OSS : ปากช่อง                                     ', 'OSS : ปากช่อง                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1400, 'สาขาสยามสแควร์                                    ', 'สาขาสยามสแควร์                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1500, 'สาขาคอนแวนต์                                      ', 'สาขาคอนแวนต์                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1600, 'สาขานครปฐม                                        ', 'สาขานครปฐม                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1700, 'สาขาบางใหญ่                                       ', 'สาขาบางใหญ่                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1800, 'สาขาห้าแยกปากเกร็ด                                ', 'สาขาห้าแยกปากเกร็ด                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1900, 'สาขาสุขุมวิท                                      ', 'สาขาสุขุมวิท                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(1901, 'BC : บิ๊กซีอ่อนนุช                                ', 'BC : บิ๊กซีอ่อนนุช                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2000, 'สาขาเพชรบุรีตัดใหม่                               ', 'สาขาเพชรบุรีตัดใหม่                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2100, 'สาขาพาราไดซ์ พาร์ค                                ', 'สาขาพาราไดซ์ พาร์ค                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2101, 'BC : บิ๊กซี บางนา                                 ', 'BC : บิ๊กซี บางนา                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2200, 'สาขาบางเขน                                        ', 'สาขาบางเขน                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2201, 'BC : THE MALL NGAMWONGWAN                         ', 'BC : THE MALL NGAMWONGWAN                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2300, 'สาขาภูเก็ต                                        ', 'สาขาภูเก็ต                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2400, 'สาขาสุขาภิบาล 3                                   ', 'สาขาสุขาภิบาล 3                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2500, 'สาขาแจ้งวัฒนะ                                     ', 'สาขาแจ้งวัฒนะ                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2501, 'BC : บิ๊กซี แจ้งวัฒนะ                             ', 'BC : บิ๊กซี แจ้งวัฒนะ                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2600, 'สาขาพระราม 2                                      ', 'สาขาพระราม 2                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2601, 'BC : THE MALL ท่าพระ                              ', 'BC : THE MALL ท่าพระ                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2700, 'สาขาสมุทรสาคร                                     ', 'สาขาสมุทรสาคร                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2800, 'สาขารังสิต                                        ', 'สาขารังสิต                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(2900, 'สาขาปทุมธานี                                      ', 'สาขาปทุมธานี                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3000, 'สาขาพุทธมณฑล                                      ', 'สาขาพุทธมณฑล                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3100, 'สาขาลำลูกกา (คลอง 2)                              ', 'สาขาลำลูกกา (คลอง 2)                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3200, 'สาขาลาดกระบัง                                     ', 'สาขาลาดกระบัง                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3201, 'เคาน์เตอร์การเงินบิ๊กซี เคหะร่มเกล้า              ', 'เคาน์เตอร์การเงินบิ๊กซี เคหะร่มเกล้า              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3300, 'สาขาเทพารักษ์                                     ', 'สาขาเทพารักษ์                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3400, 'สาขาสี่แยกบ้านแขก                                 ', 'สาขาสี่แยกบ้านแขก                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3500, 'สาขาบุญศิริ                                       ', 'สาขาบุญศิริ                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3600, 'สาขาเซ็นต์หลุยส์ 3                                ', 'สาขาเซ็นต์หลุยส์ 3                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3700, 'สาขาไมตรีจิต                                      ', 'สาขาไมตรีจิต                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3800, 'สาขาสุขสวัสดิ์                                    ', 'สาขาสุขสวัสดิ์                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3801, 'BC : บิ๊กซีบางปะกอก                               ', 'BC : บิ๊กซีบางปะกอก                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3900, 'สาขาลาดพร้าว                                      ', 'สาขาลาดพร้าว                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(3901, 'BC : THE MALL BANGKAPI                            ', 'BC : THE MALL BANGKAPI                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4000, 'สาขากิ่งแก้ว                                      ', 'สาขากิ่งแก้ว                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4100, 'พหลโยธิน                                          ', 'พหลโยธิน                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4200, 'สาขาบางบัวทอง                                     ', 'สาขาบางบัวทอง                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4300, 'สาขาบิ๊กซีนวนคร                                   ', 'สาขาบิ๊กซีนวนคร                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4400, 'สาขาเมกาบางนา                                     ', 'สาขาเมกาบางนา                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4500, 'สาขาศรีราชา                                       ', 'สาขาศรีราชา                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4600, 'สาขาตาก                                           ', 'สาขาตาก                                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4700, 'สาขายโสธร                                         ', 'สาขายโสธร                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(4800, 'สาขาอ่างทอง                                       ', 'สาขาอ่างทอง                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5000, 'สาขาเชียงราย                                      ', 'สาขาเชียงราย                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5100, 'สาขาลำปาง                                         ', 'สาขาลำปาง                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5200, 'สาขากาฬสินธุ์                                     ', 'สาขากาฬสินธุ์                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5300, 'สาขามหาสารคาม                                     ', 'สาขามหาสารคาม                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5500, 'สาขาชลบุรี                                        ', 'สาขาชลบุรี                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5600, 'สาขาระยอง                                         ', 'สาขาระยอง                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5601, 'OSS : ปลวกแดง                                     ', 'OSS : ปลวกแดง                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5700, 'สาขานครสวรรค์                                     ', 'สาขานครสวรรค์                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5800, 'สาขาย่อยสุโขทัย                                   ', 'สาขาย่อยสุโขทัย                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(5900, 'สาขาย่อยพิจิตร                                    ', 'สาขาย่อยพิจิตร                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6000, 'สาขาย่อยอุตรดิตถ์                                 ', 'สาขาย่อยอุตรดิตถ์                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6100, 'สาขาอุดรธานี                                      ', 'สาขาอุดรธานี                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6101, 'OSS : เลย                                         ', 'OSS : เลย                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6200, 'สาขาแพร่                                          ', 'สาขาแพร่                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6300, 'สาขาพัทลุง                                        ', 'สาขาพัทลุง                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6400, 'สาขาตรัง                                          ', 'สาขาตรัง                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6500, 'สาขายะลา                                          ', 'สาขายะลา                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6600, 'สาขาบุรีรัมย์                                     ', 'สาขาบุรีรัมย์                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6700, 'สาขาชัยภูมิ                                       ', 'สาขาชัยภูมิ                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6800, 'สาขาปราจีนบุรี                                    ', 'สาขาปราจีนบุรี                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6801, 'OSS : กบินทร์บุรี                                 ', 'OSS : กบินทร์บุรี                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6900, 'สาขากำแพงเพชร                                     ', 'สาขากำแพงเพชร                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(6901, 'OSS : แม่สอด                                      ', 'OSS : แม่สอด                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7000, 'สาขาพะเยา                                         ', 'สาขาพะเยา                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7100, 'สาขาสุรินทร์                                      ', 'สาขาสุรินทร์                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7200, 'สาขาปัตตานี                                       ', 'สาขาปัตตานี                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7300, 'สาขาสกลนคร                                        ', 'สาขาสกลนคร                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7301, 'OSS : มุกดาหาร                                    ', 'OSS : มุกดาหาร                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7400, 'สาขาฉะเชิงเทรา                                    ', 'สาขาฉะเชิงเทรา                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7500, 'สาขานครศรีธรรมราช                                 ', 'สาขานครศรีธรรมราช                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7600, 'สาขาสุพรรณบุรี                                    ', 'สาขาสุพรรณบุรี                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7700, 'สาขาราชบุรี                                       ', 'สาขาราชบุรี                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7800, 'สาขาจันทบุรี                                      ', 'สาขาจันทบุรี                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(7900, 'สาขาเพชรบุรี                                      ', 'สาขาเพชรบุรี                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8000, 'สาขาเพชรบูรณ์                                     ', 'สาขาเพชรบูรณ์                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8100, 'สาขาอุบลราชธานี                                   ', 'สาขาอุบลราชธานี                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8101, 'OSS:วารินชำราบ                                    ', 'OSS:วารินชำราบ                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8200, 'สาขากาญจนบุรี                                     ', 'สาขากาญจนบุรี                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8300, 'สาขาพระนครศรีอยุธยา                               ', 'สาขาพระนครศรีอยุธยา                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8400, 'สาขาสระบุรี                                       ', 'สาขาสระบุรี                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8500, 'สาขาน่าน                                          ', 'สาขาน่าน                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8600, 'สาขาเลย                                           ', 'สาขาเลย                                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8700, 'สาขาสุราษฎร์ธานี                                  ', 'สาขาสุราษฎร์ธานี                                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8800, 'สาขาประจวบคีรีขันธ์                               ', 'สาขาประจวบคีรีขันธ์                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8900, 'สาขาชุมพร                                         ', 'สาขาชุมพร                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8901, 'สาขาย่อยหลังสวน                                   ', 'สาขาย่อยหลังสวน                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(9000, 'สาขาลำพูน                                         ', 'สาขาลำพูน                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(9100, 'สาขาระนอง                                         ', 'สาขาระนอง                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(9200, 'สาขาลพบุรี                                        ', 'สาขาลพบุรี                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(9300, 'สาขาร้อยเอ็ด                                      ', 'สาขาร้อยเอ็ด                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(9400, 'สาขานครนายก                                       ', 'สาขานครนายก                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(9500, 'สาขาตราด                                          ', 'สาขาตราด                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(9700, 'สาขากระบี่                                        ', 'สาขากระบี่                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(10100, 'สาขาแม่ฮ่องสอน                                    ', 'สาขาแม่ฮ่องสอน                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(10200, 'สาขาบ้านฉาง                                       ', 'สาขาบ้านฉาง                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(10400, 'สาขาอุทัยธานี                                     ', 'สาขาอุทัยธานี                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(10500, 'สาขาชัยนาท                                        ', 'สาขาชัยนาท                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(10600, 'สาขาถนนจอมพล                                      ', 'สาขาถนนจอมพล                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(10700, 'สาขาหนองคาย                                       ', 'สาขาหนองคาย                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(10900, 'สาขาย่อยอำนาจเจริญ                                ', 'สาขาย่อยอำนาจเจริญ                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11000, 'สาขาศรีสะเกษ                                      ', 'สาขาศรีสะเกษ                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11100, 'สาขาหัวหมากทาวน์ฯ                                 ', 'สาขาหัวหมากทาวน์ฯ                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11200, 'สาขานครพนม                                        ', 'สาขานครพนม                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11300, 'สาขามุกดาหาร                                      ', 'สาขามุกดาหาร                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11400, 'สาขาบ่อวิน                                        ', 'สาขาบ่อวิน                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11500, 'สาขาถนนโรจนะ                                      ', 'สาขาถนนโรจนะ                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11600, 'สาขาสัมมากร เพลส รามคำแหง 110                     ', 'สาขาสัมมากร เพลส รามคำแหง 110                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11700, 'สาขาอาคารชินวัตร 3                                ', 'สาขาอาคารชินวัตร 3                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11800, 'สาขาวงศ์สว่างทาวน์ฯ                               ', 'สาขาวงศ์สว่างทาวน์ฯ                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(11900, 'สาขาสิงห์บุรี                                     ', 'สาขาสิงห์บุรี                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12000, 'สาขาธัญญะช็อปปิ้ง                                 ', 'สาขาธัญญะช็อปปิ้ง                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12100, 'สาขาบ้านโป่ง                                      ', 'สาขาบ้านโป่ง                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12200, 'สาขาหัวหิน                                        ', 'สาขาหัวหิน                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12300, 'สาขาสมุทรสงคราม                                   ', 'สาขาสมุทรสงคราม                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12302, 'เคาน์เตอร์การเงินอัมพวา                           ', 'เคาน์เตอร์การเงินอัมพวา                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12400, 'สาขาเซ็นทรัล อุดร                                 ', 'สาขาเซ็นทรัล อุดร                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12500, 'สาขาเกาะสมุย                                      ', 'สาขาเกาะสมุย                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(12900, 'สาขาพังงา                                         ', 'สาขาพังงา                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(13100, 'สาขานราธิวาส                                      ', 'สาขานราธิวาส                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(13200, 'สาขาสตูล                                          ', 'สาขาสตูล                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(13400, 'OSS: ฝาง                                          ', 'OSS: ฝาง                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(13500, 'สาขาสระแก้ว                                       ', 'สาขาสระแก้ว                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(14900, 'สาขาหนองบัวลำภู                                   ', 'สาขาหนองบัวลำภู                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(16500, 'สาขาสงขลา                                         ', 'สาขาสงขลา                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(19800, 'สาขา FDR                                          ', 'สาขา FDR                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(19900, 'สาขาสมาร์ท                                        ', 'สาขาสมาร์ท                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20100, 'สาขาซีคอน บางแค                                   ', 'สาขาซีคอน บางแค                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20200, 'สาขาสัมมากร เพลส ราชพฤกษ์                         ', 'สาขาสัมมากร เพลส ราชพฤกษ์                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20300, 'สาขาแม็คโคร จรัญฯ                                 ', 'สาขาแม็คโคร จรัญฯ                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20400, 'สาขาฟิวเจอร์พาร์ค รังสิต                          ', 'สาขาฟิวเจอร์พาร์ค รังสิต                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20500, 'สาขาแฟชั่นไอส์แลนด์                               ', 'สาขาแฟชั่นไอส์แลนด์                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20600, 'สาขาถนนทรงวาด                                     ', 'สาขาถนนทรงวาด                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20700, 'สาขาเจริญนคร                                      ', 'สาขาเจริญนคร                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20800, 'สาขาเซ็นทรัล พระราม 9                             ', 'สาขาเซ็นทรัล พระราม 9                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(20900, 'สาขาเทสโก้ โลตัส พระราม 4                         ', 'สาขาเทสโก้ โลตัส พระราม 4                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21000, 'สาขาบิ๊กซี สมุทรปราการ                            ', 'สาขาบิ๊กซี สมุทรปราการ                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21100, 'สาขาเดอะมอลล์ บางแค                               ', 'สาขาเดอะมอลล์ บางแค                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21200, 'สาขาเซ็นทรัล พระราม 3                             ', 'สาขาเซ็นทรัล พระราม 3                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21300, 'สาขาบิ๊กซีรังสิต คลอง 6                           ', 'สาขาบิ๊กซีรังสิต คลอง 6                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21400, 'สาขาสุพรีม คอมเพล็กซ์                             ', 'สาขาสุพรีม คอมเพล็กซ์                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21500, 'สาขาเพลินนารี่มอลล์                               ', 'สาขาเพลินนารี่มอลล์                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21600, 'สาขาศูนย์ราชการเฉลิมพระเกียรติ                    ', 'สาขาศูนย์ราชการเฉลิมพระเกียรติ                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21700, 'สาขาอาคารเพิร์ล แบงก์ค็อก                         ', 'สาขาอาคารเพิร์ล แบงก์ค็อก                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21800, 'สาขาเซ็นทรัล เวสต์เกต                             ', 'สาขาเซ็นทรัล เวสต์เกต                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(26000, 'สาขาบิ๊กซี ราชดำริ                                ', 'สาขาบิ๊กซี ราชดำริ                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(26100, 'สาขามีนบุรี                                       ', 'สาขามีนบุรี                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(26200, 'สาขาเซ็นทรัล ปิ่นเกล้า                            ', 'สาขาเซ็นทรัล ปิ่นเกล้า                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30000, 'สาขาสุเทพ                                         ', 'สาขาสุเทพ                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30100, 'สาขาอุตรดิตถ์                                     ', 'สาขาอุตรดิตถ์                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30200, 'สาขาสุโขทัย                                       ', 'สาขาสุโขทัย                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30300, 'สาขาแม่สาย                                        ', 'สาขาแม่สาย                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30400, 'สาขาพิจิตร                                        ', 'สาขาพิจิตร                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30500, 'สาขาสันกำแพง                                      ', 'สาขาสันกำแพง                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30600, 'สาขาแม่สอด                                        ', 'สาขาแม่สอด                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30700, 'สาขาบึงสามพัน                                     ', 'สาขาบึงสามพัน                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30800, 'สาขาสันทราย                                       ', 'สาขาสันทราย                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(30900, 'สาขาเซ็นทรัล เชียงใหม่ แอร์พอร์ต                  ', 'สาขาเซ็นทรัล เชียงใหม่ แอร์พอร์ต                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(31000, 'สาขาเซ็นทรัล เชียงราย                             ', 'สาขาเซ็นทรัล เชียงราย                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40000, 'สาขาอำนาจเจริญ                                    ', 'สาขาอำนาจเจริญ                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40100, 'สาขาชุมแพ                                         ', 'สาขาชุมแพ                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40200, 'สาขาบึงกาฬ                                        ', 'สาขาบึงกาฬ                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40300, 'สาขาเซ็นทรัล อุบล                                 ', 'สาขาเซ็นทรัล อุบล                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40400, 'สาขาถนนมิตรภาพ ขอนแก่น                            ', 'สาขาถนนมิตรภาพ ขอนแก่น                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40500, 'สาขาภูเขียว                                       ', 'สาขาภูเขียว                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40600, 'สาขานางรอง                                        ', 'สาขานางรอง                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40700, 'สาขาบัวใหญ่                                       ', 'สาขาบัวใหญ่                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40800, 'สาขาสว่างแดนดิน                                   ', 'สาขาสว่างแดนดิน                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(40900, 'สาขาพล                                            ', 'สาขาพล                                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(41000, 'สาขาปากช่อง                                       ', 'สาขาปากช่อง                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(41100, 'สาขาเซ็นทรัล ขอนแก่น                              ', 'สาขาเซ็นทรัล ขอนแก่น                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(41200, 'สาขาเซ็นทรัล โคราช                                ', 'สาขาเซ็นทรัล โคราช                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(50000, 'สาขานิคมอุตสาหกรรม 304                            ', 'สาขานิคมอุตสาหกรรม 304                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(50100, 'สาขาศาลายา พุทธมณฑล สาย 4                         ', 'สาขาศาลายา พุทธมณฑล สาย 4                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(50200, 'สาขาเซ็นทรัล ศาลายา                               ', 'สาขาเซ็นทรัล ศาลายา                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60000, 'สาขาอมตะนคร                                       ', 'สาขาอมตะนคร                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60100, 'สาขาบุญสัมพันธ์                                   ', 'สาขาบุญสัมพันธ์                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60200, 'สาขาปลวกแดง                                       ', 'สาขาปลวกแดง                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60300, 'สาขาสัตหีบ                                        ', 'สาขาสัตหีบ                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60400, 'สาขาเซ็นทรัล พัทยา                                ', 'สาขาเซ็นทรัล พัทยา                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60500, 'สาขาสวนอุตสาหกรรมสหพัฒน์แหลมฉบัง                  ', 'สาขาสวนอุตสาหกรรมสหพัฒน์แหลมฉบัง                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60600, 'สาขาบ้านบึง                                       ', 'สาขาบ้านบึง                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60700, 'สาขาพนมสารคาม                                     ', 'สาขาพนมสารคาม                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60800, 'สาขานิคมพัฒนา                                     ', 'สาขานิคมพัฒนา                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(60900, 'สาขาเซ็นทรัล ระยอง                                ', 'สาขาเซ็นทรัล ระยอง                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(61000, 'สาขาพนัสนิคม                                      ', 'สาขาพนัสนิคม                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70000, 'สาขาเซ็นทรัล สุราษฎร์ธานี                         ', 'สาขาเซ็นทรัล สุราษฎร์ธานี                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70100, 'สาขาถลาง                                          ', 'สาขาถลาง                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70200, 'สาขาทุ่งสง                                        ', 'สาขาทุ่งสง                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70300, 'สาขาฉลอง                                          ', 'สาขาฉลอง                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70400, 'สาขาถนนราษฎร์อุทิศ                                ', 'สาขาถนนราษฎร์อุทิศ                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70500, 'สาขาเซ็นทรัล หาดใหญ่                              ', 'สาขาเซ็นทรัล หาดใหญ่                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70600, 'สาขาสะเดา                                         ', 'สาขาสะเดา                                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70700, 'สาขาเซ็นทรัล นครศรี                               ', 'สาขาเซ็นทรัล นครศรี                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77011, 'HUB: NO                                           ', 'HUB: NO                                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88851, 'ฝ่ายสนับสนุนสาขานครหลวง                           ', 'ฝ่ายสนับสนุนสาขานครหลวง                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77021, 'สนข.-กทม.-ตะวันตก (สนญ.)                          ', 'สนข.-กทม.-ตะวันตก (สนญ.)                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77022, 'สนข.-กรุงเทพ-เหนือ (สนญ.)                         ', 'สนข.-กรุงเทพ-เหนือ (สนญ.)                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77024, 'HUB : ห้าแยกปากเกร็ด                              ', 'HUB : ห้าแยกปากเกร็ด                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77025, 'HUB : พุทธมณฑล                                    ', 'HUB : พุทธมณฑล                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88852, 'ภาคเหนือตอนล่าง                                   ', 'ภาคเหนือตอนล่าง                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77031, 'สำนักงานเขตเชียงใหม่                              ', 'สำนักงานเขตเชียงใหม่                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77032, 'สำนักงานเขตเชียงราย                               ', 'สำนักงานเขตเชียงราย                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77033, 'สำนักงานเขตพิษณุโลก                               ', 'สำนักงานเขตพิษณุโลก                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77034, 'สำนักงานเขตนครสวรรค์                              ', 'สำนักงานเขตนครสวรรค์                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88853, 'ภาคตะวันออกเฉียงเหนือตอนล่าง                      ', 'ภาคตะวันออกเฉียงเหนือตอนล่าง                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77041, 'สำนักงานเขตพระนครศรีอยุธยา                        ', 'สำนักงานเขตพระนครศรีอยุธยา                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77042, 'สำนักงานเขตชลบุรี                                 ', 'สำนักงานเขตชลบุรี                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77043, 'สำนักงานเขตพัทยา                                  ', 'สำนักงานเขตพัทยา                                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77044, 'สำนักงานเขตระยอง                                  ', 'สำนักงานเขตระยอง                                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77471, 'สนข.-กรุงเทพ-ใต้ (สนญ.)                           ', 'สนข.-กรุงเทพ-ใต้ (สนญ.)                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77472, 'สนข.-กรุงเทพ-ตะวันออก(สนญ.)                       ', 'สนข.-กรุงเทพ-ตะวันออก(สนญ.)                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88854, 'ภาคตะวันตกและภาคใต้ตอนล่าง                        ', 'ภาคตะวันตกและภาคใต้ตอนล่าง                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77481, 'สำนักงานเขตอุดรธานี                               ', 'สำนักงานเขตอุดรธานี                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77482, 'สำนักงานเขตขอนแก่น                                ', 'สำนักงานเขตขอนแก่น                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77483, 'สำนักงานเขตนครราชสีมา                             ', 'สำนักงานเขตนครราชสีมา                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77484, 'สำนักงานเขตอุบลราชธานี                            ', 'สำนักงานเขตอุบลราชธานี                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88855, 'ฝ่ายพัฒนาระบบดิจิทัลเซอร์วิส                      ', 'ฝ่ายพัฒนาระบบดิจิทัลเซอร์วิส                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77491, 'สำนักงานเขตสมุทรสาคร                              ', 'สำนักงานเขตสมุทรสาคร                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77492, 'สำนักงานเขตประจวบคีรีขันธ์                        ', 'สำนักงานเขตประจวบคีรีขันธ์                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77493, 'สำนักงานเขตสุราษฎร์ธานี                           ', 'สำนักงานเขตสุราษฎร์ธานี                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77494, 'สำนักงานเขตนครศรีธรรมราช                          ', 'สำนักงานเขตนครศรีธรรมราช                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77495, 'สำนักงานเขตหาดใหญ่                                ', 'สำนักงานเขตหาดใหญ่                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88800, 'HEAD OFFICE                                       ', 'HEAD OFFICE                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88801, 'ฝ่ายธุรกรรมการเงิน                                ', 'ฝ่ายธุรกรรมการเงิน                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88802, 'ฝ่ายสาขา กทม.และปริมณฑล 1                         ', 'ฝ่ายสาขา กทม.และปริมณฑล 1                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88803, 'ภาคเหนือตอนบน                                     ', 'ภาคเหนือตอนบน                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88804, 'ภาคตะวันออก                                       ', 'ภาคตะวันออก                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88805, 'ฝ่ายบริหารหนี้ กทม.และปริมณฑล                     ', 'ฝ่ายบริหารหนี้ กทม.และปริมณฑล                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88806, 'ฝ่ายวิเคราะห์สินเชื่อรายย่อย                      ', 'ฝ่ายวิเคราะห์สินเชื่อรายย่อย                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88807, 'ฝ่ายประเมินราคาหลักทรัพย์                         ', 'ฝ่ายประเมินราคาหลักทรัพย์                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88808, 'ฝ่ายบริหารคดี                                     ', 'ฝ่ายบริหารคดี                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88809, 'ฝ่ายบริหารสำนักงานและกิจการสาขา                   ', 'ฝ่ายบริหารสำนักงานและกิจการสาขา                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88810, 'ฝ่ายทรัพยากรบุคคล                                 ', 'ฝ่ายทรัพยากรบุคคล                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88811, 'ฝ่ายการบัญชี                                      ', 'ฝ่ายการบัญชี                                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88812, 'ฝ่ายวิเคราะห์สินเชื่อโครงการ                      ', 'ฝ่ายวิเคราะห์สินเชื่อโครงการ                      ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88813, 'ฝ่ายสนับสนุนสินเชื่อ                              ', 'ฝ่ายสนับสนุนสินเชื่อ                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88814, 'ฝ่ายพิธีการสินเชื่อ                               ', 'ฝ่ายพิธีการสินเชื่อ                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88815, 'ฝ่ายพัฒนาระบบสารสนเทศ                             ', 'ฝ่ายพัฒนาระบบสารสนเทศ                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88816, 'ฝ่ายปฏิบัติการเทคโนโลยีสารสนเทศ                   ', 'ฝ่ายปฏิบัติการเทคโนโลยีสารสนเทศ                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88817, 'สำนักกรรมการผู้จัดการ                             ', 'สำนักกรรมการผู้จัดการ                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88818, 'ฝ่ายตรวจสอบสาขา                                   ', 'ฝ่ายตรวจสอบสาขา                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88819, 'ฝ่ายพัฒนาระบบธุรกิจหลัก                           ', 'ฝ่ายพัฒนาระบบธุรกิจหลัก                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88820, 'ฝ่ายบริหารและพัฒนาองค์กร                          ', 'ฝ่ายบริหารและพัฒนาองค์กร                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88821, 'ฝ่ายเงินฝากและพันธมิตร                            ', 'ฝ่ายเงินฝากและพันธมิตร                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88822, 'ฝ่ายวิเคราะห์และวางแผนกลยุทธ์                     ', 'ฝ่ายวิเคราะห์และวางแผนกลยุทธ์                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88823, 'ฝ่ายวิชาการ                                       ', 'ฝ่ายวิชาการ                                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88824, 'ฝ่ายบริหาร NPA                                    ', 'ฝ่ายบริหาร NPA                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88825, 'ฝ่ายบริหารความเสี่ยง                              ', 'ฝ่ายบริหารความเสี่ยง                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88826, 'ฝ่ายพัฒนาธุรกิจเงินฝาก                            ', 'ฝ่ายพัฒนาธุรกิจเงินฝาก                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88827, 'ฝ่ายลูกค้าสัมพันธ์                                ', 'ฝ่ายลูกค้าสัมพันธ์                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88828, 'ฝ่ายบริหารการเงิน                                 ', 'ฝ่ายบริหารการเงิน                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88829, 'ฝ่ายบังคับคดีและหนี้ส่วนขาด                       ', 'ฝ่ายบังคับคดีและหนี้ส่วนขาด                       ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88830, 'ฝ่ายจัดหาและการพัสดุ                              ', 'ฝ่ายจัดหาและการพัสดุ                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88831, 'ฝ่ายสื่อสารองค์กร                                 ', 'ฝ่ายสื่อสารองค์กร                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88832, 'ฝ่ายนโยบายสินเชื่อธุรกิจและภาครัฐ                 ', 'ฝ่ายนโยบายสินเชื่อธุรกิจและภาครัฐ                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88833, 'ฝ่ายปฏิบัติการบริการอิเล็กทรอนิกส์                ', 'ฝ่ายปฏิบัติการบริการอิเล็กทรอนิกส์                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88834, 'ฝ่ายบริหารหนี้ภูมิภาค                             ', 'ฝ่ายบริหารหนี้ภูมิภาค                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88835, 'ฝ่ายกำกับการปฏิบัติงาน                            ', 'ฝ่ายกำกับการปฏิบัติงาน                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88836, 'ฝ่ายตรวจสอบระบบเทคโนโลยีสารสนเทศ                  ', 'ฝ่ายตรวจสอบระบบเทคโนโลยีสารสนเทศ                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88837, 'ฝ่ายพัฒนาธุรกิจสินเชื่อ                           ', 'ฝ่ายพัฒนาธุรกิจสินเชื่อ                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88839, 'ศูนย์ความมั่นคงปลอดภัยด้าน IT                     ', 'ศูนย์ความมั่นคงปลอดภัยด้าน IT                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88840, 'ฝ่ายกิจกรรมเพื่อสังคม                             ', 'ฝ่ายกิจกรรมเพื่อสังคม                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88841, 'ฝ่ายสอบทานสินเชื่อ                                ', 'ฝ่ายสอบทานสินเชื่อ                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88842, 'ฝ่ายพัฒนาและบริหารการเรียนรู้                     ', 'ฝ่ายพัฒนาและบริหารการเรียนรู้                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88843, 'ฝ่ายธนบดีธนกิจ                                    ', 'ฝ่ายธนบดีธนกิจ                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88844, 'ฝ่ายพัฒนากระบวนงาน                                ', 'ฝ่ายพัฒนากระบวนงาน                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88845, 'ฝ่ายประเมินผลองค์กร                               ', 'ฝ่ายประเมินผลองค์กร                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88846, 'ฝ่ายตรวจสอบสำนักงานใหญ่                           ', 'ฝ่ายตรวจสอบสำนักงานใหญ่                           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88847, 'ฝ่ายสาขา กทม.และปริมณฑล 2                         ', 'ฝ่ายสาขา กทม.และปริมณฑล 2                         ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88848, 'ภาคตะวันออกเฉียงเหนือตอนบน                        ', 'ภาคตะวันออกเฉียงเหนือตอนบน                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88849, 'ภาคกลางและภาคใต้ตอนบน                             ', 'ภาคกลางและภาคใต้ตอนบน                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88850, 'ศูนย์ป้องกันการทุจริต                             ', 'ศูนย์ป้องกันการทุจริต                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88860, 'ศูนย์ข้อมูลอสังหาริมทรัพย์                        ', 'ศูนย์ข้อมูลอสังหาริมทรัพย์                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(99906, 'Calendar Branch 6 Days                            ', 'ปฏิทินสาขา 6 วัน                                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(99907, 'Calendar Branch 7 Days                            ', 'ปฏิทินสาขา 7 วัน                                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(99908, 'Calendar Branch Special                           ', 'ปฏิทินสาขาพิเศษ                                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(70800, 'สาขาเบตง                                          ', 'สาขาเบตง                                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(26300, 'PREMIER SERVICE CENTER (ศูนย์ PSC)                ', 'PREMIER SERVICE CENTER (ศูนย์ PSC)                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78033, 'ศูนย์ DEC - เชียงราย                              ', 'ศูนย์ DEC - เชียงราย                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78021, 'ศูนย์ DEC - นครหลวง                               ', 'ศูนย์ DEC - นครหลวง                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78031, 'ศูนย์ DEC - เชียงใหม่                             ', 'ศูนย์ DEC - เชียงใหม่                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78032, 'ศูนย์ DEC - พิษณุโลก                              ', 'ศูนย์ DEC - พิษณุโลก                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78481, 'ศูนย์ DEC - นครราชสีมา                            ', 'ศูนย์ DEC - นครราชสีมา                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78482, 'ศูนย์ DEC - อุดรธานี                              ', 'ศูนย์ DEC - อุดรธานี                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78041, 'ศูนย์ DEC - ชลบุรี                                ', 'ศูนย์ DEC - ชลบุรี                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78042, 'ศูนย์ DEC - อยุธยา                                ', 'ศูนย์ DEC - อยุธยา                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78491, 'ศูนย์ DEC - สมุทรสาคร                             ', 'ศูนย์ DEC - สมุทรสาคร                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78492, 'ศูนย์ DEC - สุราษฎร์ธานี                          ', 'ศูนย์ DEC - สุราษฎร์ธานี                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78493, 'ศูนย์ DEC - หาดใหญ่                               ', 'ศูนย์ DEC - หาดใหญ่                               ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88856, 'ฝ่ายวางแผนกลยุทธ์และสนับสนุนงานสารสนเทศ           ', 'ฝ่ายวางแผนกลยุทธ์และสนับสนุนงานสารสนเทศ           ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88857, 'ฝ่ายกฎหมาย                                        ', 'ฝ่ายกฎหมาย                                        ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77035, 'สำนักงานเขตลำปาง                                  ', 'สำนักงานเขตลำปาง                                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77046, 'สำนักงานเขตฉะเชิงเทรา                             ', 'สำนักงานเขตฉะเชิงเทรา                             ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(77485, 'สำนักงานเขตสกลนคร                                 ', 'สำนักงานเขตสกลนคร                                 ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78483, 'ศูนย์ DEC -อุบลราชธานี                            ', 'ศูนย์ DEC -อุบลราชธานี                            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(78022, 'ศูนย์บริการนครหลวง                                ', 'ศูนย์บริการนครหลวง                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(21900, 'สาขาเดอะมอลล์บางกะปิ                              ', 'สาขาเดอะมอลล์บางกะปิ                              ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(26400, 'สาขาบิ๊กซีบางปะกอก                                ', 'สาขาบิ๊กซีบางปะกอก                                ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(26500, 'สาขาบิ๊กซี บางนา                                  ', 'สาขาบิ๊กซี บางนา                                  ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(22000, 'สาขาเดอะมอลล์ งามวงศ์วาน                          ', 'สาขาเดอะมอลล์ งามวงศ์วาน                          ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(8401, 'ศูนย์บริการธนาคาร (OSS) นครนายก                   ', 'ศูนย์บริการธนาคาร (OSS) นครนายก                   ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(50300, 'สาขานครชัยศรี                                     ', 'สาขานครชัยศรี                                     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88858, 'ฝ่ายธุรกรรมตลาดรองสินเชื่อที่อยู่อาศัย            ', 'ฝ่ายธุรกรรมตลาดรองสินเชื่อที่อยู่อาศัย            ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(88859, 'ฝ่ายสนับสนุนบริหารตลาดรองสินเชื่อที่อยู่อาศัย     ', 'ฝ่ายสนับสนุนบริหารตลาดรองสินเชื่อที่อยู่อาศัย     ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(22100, 'สาขาไอทีสแควร์                                    ', 'สาขาไอทีสแควร์                                    ');
+INSERT INTO STHPRSYSP.SSDATA
+(JDBR, JDNAME, JDLDSC)
+VALUES(19700, 'ศูนย์บริการดิจิทัล (DSC)                          ', 'ศูนย์บริการดิจิทัล (DSC)                          ');

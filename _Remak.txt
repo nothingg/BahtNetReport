@@ -1,0 +1,14 @@
+edit
+- ไม่ต้องไปหน้าใหม่ ให้ทำเป็น Slide ลงมา
+- filed edit
+-- สาขา , ปปง
+
+20230209
+- database
+-- add : amlo_is เป็น ปปง ไหม
+-- add : amlo_done ตรวจปปง เรียบร้อยแล้ว
+
+- Page Update
+-- Change don't new page. make to slide down
+-- Branch
+-- ปปง

@@ -12,6 +12,8 @@ routes = Blueprint('routes',__name__)
 timezone = pytz.timezone("Asia/Bangkok")
 current_time = datetime.now(timezone)
 
+
+
 @routes.route('/')
 def list_data():
 
@@ -73,8 +75,6 @@ def upload_file():
 
             data['created_date'] = current_time
             data['input_type'] = 'upload'
-
-
 
             # Connect to your database using the SQLAlchemy engine
             engine = db.engine
@@ -167,7 +167,7 @@ def update():
 
 @routes.route('/delete/<string:id_data>')
 def delete(id_data):
-    item = Reports.query.get(id_data)
+    item = Reports.query.get('id_data')
     db.session.delete(item)
     db.session.commit()
 

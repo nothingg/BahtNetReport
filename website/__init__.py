@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask , flash , redirect
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -10,7 +10,13 @@ app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
 from website.routes import routes
+
 app.register_blueprint(routes, url_prefix='/')
+
+# @app.errorhandler(Exception)
+# def handle_exception(e):
+#     flash("An error occurred: {}".format(e), category='error')
+#     return redirect("/")
 
 
 #
