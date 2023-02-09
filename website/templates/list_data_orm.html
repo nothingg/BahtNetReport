@@ -30,13 +30,14 @@
         <th scope="col">creditor_name</th>
         <th scope="col">dept</th>
         <th scope="col">input_type</th>
+        <th scope="col">amlo_is</th>
+        <th scope="col">amlo_true</th>
         <th scope="col"></th>
 
     </tr>
   </thead>
   <tbody>
      {% for row in data %}
-
     <tr>
         <th scope="row"></th>
         <td> {{ row.cs_ref}} </td>
@@ -61,8 +62,11 @@
         <td> {{ row.creditor_name}} </td>
         <td> {{ row.dept}} </td>
         <td> {{ row.input_type }} </td>
+        <td> {{ row.amlo_is }} </td>
+        <td> {{ row.amlo_done }} </td>
         <td>
             <td>
+                <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.cs_ref}}">Edit Toggle</a>
                 <a href="/form_update/{{ row.cs_ref }}" class="btn btn-warning btn-xs">Edit</a>
                 {% if row.input_type != 'upload' %}
                     <a href="/delete/{{ row.cs_ref }}" class="btn btn-danger btn-xs" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
@@ -70,7 +74,45 @@
             </td>
         </td>
     </tr>
-
+    <div id="modaledit{{row.cs_ref}}" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">อัพเดทข้อมูลของท่าน</h4>
+          </div>
+          <div class="modal-body">
+            <form action="/update" method="POST">
+              <div class="form-group">
+                <label>ฝ่าย / สาขา:</label>
+                <input type="hidden" name="cs_ref" value="{{row.cs_ref}}">
+                <input type="text" class="form-control" name="dept" value="{{row.dept}}">
+              </div>
+              <div class="form-group">
+                <label>รายการ ปปง.</label>
+                <select name="amlo_is" class="form-control">
+                  <option value="True" {% if row.amlo_is == True %}selected{% endif %}>True</option>
+                  <option value="False" {% if row.amlo_is == False %}selected{% endif %}>False</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>อัพเดท ปปง. </label>
+                <select name="amlo_done"  class="form-control">
+                  <option value="True" {% if row.amlo_done == True %}selected{% endif %}>True</option>
+                  <option value="False" {% if row.amlo_done == False %}selected{% endif %}>False</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">อัพเดท</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        </div>
+    </div>
     {% endfor%}
   </tbody>
 </table>

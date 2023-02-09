@@ -1,3 +1,4 @@
+import logging
 from flask import Flask , flash , redirect
 from flask_sqlalchemy import SQLAlchemy
 
@@ -8,6 +9,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhos
 app.config['SQLALCHEMY_ECHO'] = True
 
 db = SQLAlchemy(app)
+
+logging.basicConfig()
+logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
 from website.routes import routes
 
