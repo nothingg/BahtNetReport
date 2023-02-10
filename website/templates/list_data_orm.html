@@ -4,120 +4,129 @@
 
 <h1 align="center"> Notes</h1>
 <div class="table-responsive-md">
-<table class="table table-striped">
-  <thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">cs_ref</th>
-        <th scope="col">instruction_id</th>
-        <th scope="col">mt</th>
-        <th scope="col">ctgypurp</th>
-        <th scope="col">dr_bic</th>
-        <th scope="col">dr_acct</th>
-        <th scope="col">cr_bic</th>
-        <th scope="col">cr_acct</th>
-        <th scope="col">dr_amt</th>
-        <th scope="col">cr_amt</th>
-        <th scope="col">status</th>
-        <th scope="col">error</th>
-        <th scope="col">date</th>
-        <th scope="col">time</th>
-        <th scope="col">ch</th>
-        <th scope="col">transmission_type</th>
-        <th scope="col">debtor_acct</th>
-        <th scope="col">debtor_name</th>
-        <th scope="col">creditor_acct</th>
-        <th scope="col">creditor_name</th>
-        <th scope="col">dept</th>
-        <th scope="col">input_type</th>
-        <th scope="col">amlo_is</th>
-        <th scope="col">amlo_true</th>
-        <th scope="col"></th>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">cs_ref</th>
+            <th scope="col">instruction_id</th>
+            <th scope="col">mt</th>
+            <th scope="col">ctgypurp</th>
+            <th scope="col">dr_bic</th>
+            <th scope="col">dr_acct</th>
+            <th scope="col">cr_bic</th>
+            <th scope="col">cr_acct</th>
+            <th scope="col">dr_amt</th>
+            <th scope="col">cr_amt</th>
+            <th scope="col">status</th>
+            <th scope="col">error</th>
+            <th scope="col">date</th>
+            <th scope="col">time</th>
+            <th scope="col">ch</th>
+            <th scope="col">transmission_type</th>
+            <th scope="col">debtor_acct</th>
+            <th scope="col">debtor_name</th>
+            <th scope="col">creditor_acct</th>
+            <th scope="col">creditor_name</th>
+            <th scope="col">dept</th>
+            <th scope="col">input_type</th>
+            <th scope="col">amlo_is</th>
+            <th scope="col">amlo_true</th>
+            <th scope="col"></th>
 
-    </tr>
-  </thead>
-  <tbody>
-     {% for row in data %}
-    <tr>
-        <th scope="row"></th>
-        <td> {{ row.cs_ref}} </td>
-        <td> {{ row.instruction_id }} </td>
-        <td> {{ row.mt}} </td>
-        <td> {{ row.ctgypurp}} </td>
-        <td> {{ row.dr_bic}} </td>
-        <td> {{ row.dr_acct}} </td>
-        <td> {{ row.cr_bic}} </td>
-        <td> {{ row.cr_acct}} </td>
-        <td> {{ row.dr_amt }} </td>
-        <td> {{ row.cr_amt}} </td>
-        <td> {{ row.status}} </td>
-        <td> {{ row.error}} </td>
-        <td> {{ row.report_date}} </td>
-        <td> {{ row.report_time}} </td>
-        <td> {{ row.ch}} </td>
-        <td> {{ row.transmission_type}} </td>
-        <td> {{ row.debtor_acct}} </td>
-        <td> {{ row.debtor_name}} </td>
-        <td> {{ row.creditor_acct}} </td>
-        <td> {{ row.creditor_name}} </td>
-        <td> {{ row.dept}} </td>
-        <td> {{ row.input_type }} </td>
-        <td> {{ row.amlo_is }} </td>
-        <td> {{ row.amlo_done }} </td>
-        <td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+        <tr>
+            <th scope="row"></th>
+            <td> {{ row.cs_ref}}</td>
+            <td> {{ row.instruction_id }}</td>
+            <td> {{ row.mt}}</td>
+            <td> {{ row.ctgypurp}}</td>
+            <td> {{ row.dr_bic}}</td>
+            <td> {{ row.dr_acct}}</td>
+            <td> {{ row.cr_bic}}</td>
+            <td> {{ row.cr_acct}}</td>
+            <td> {{ row.dr_amt }}</td>
+            <td> {{ row.cr_amt}}</td>
+            <td> {{ row.status}}</td>
+            <td> {{ row.error}}</td>
+            <td> {{ row.report_date}}</td>
+            <td> {{ row.report_time}}</td>
+            <td> {{ row.ch}}</td>
+            <td> {{ row.transmission_type}}</td>
+            <td> {{ row.debtor_acct}}</td>
+            <td> {{ row.debtor_name}}</td>
+            <td> {{ row.creditor_acct}}</td>
+            <td> {{ row.creditor_name}}</td>
+            <td> {{ row.dept}}</td>
+            <td> {{ row.input_type }}</td>
+            <td> {{ row.amlo_is }}</td>
+            <td> {{ row.amlo_done }}</td>
             <td>
-                <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.cs_ref}}">Edit Toggle</a>
+            <td>
+                <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.cs_ref}}">Edit
+                    Toggle</a>
                 <a href="/form_update/{{ row.cs_ref }}" class="btn btn-warning btn-xs">Edit</a>
                 {% if row.input_type != 'upload' %}
-                    <a href="/delete/{{ row.cs_ref }}" class="btn btn-danger btn-xs" onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
+                <a href="/delete/{{ row.cs_ref }}" class="btn btn-danger btn-xs"
+                   onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
                 {% endif %}
             </td>
-        </td>
-    </tr>
-    <div id="modaledit{{row.cs_ref}}" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">อัพเดทข้อมูลของท่าน</h4>
-          </div>
-          <div class="modal-body">
-            <form action="/update" method="POST">
-              <div class="form-group">
-                <label>ฝ่าย / สาขา:</label>
-                <input type="hidden" name="cs_ref" value="{{row.cs_ref}}">
-                <input type="text" class="form-control" name="dept" value="{{row.dept}}">
-              </div>
-              <div class="form-group">
-                <label>รายการ ปปง.</label>
-                <select name="amlo_is" class="form-control">
-                  <option value="True" {% if row.amlo_is == True %}selected{% endif %}>True</option>
-                  <option value="False" {% if row.amlo_is == False %}selected{% endif %}>False</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>อัพเดท ปปง. </label>
-                <select name="amlo_done"  class="form-control">
-                  <option value="True" {% if row.amlo_done == True %}selected{% endif %}>True</option>
-                  <option value="False" {% if row.amlo_done == False %}selected{% endif %}>False</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-primary" type="submit">อัพเดท</button>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        </div>
-    </div>
-    {% endfor%}
-  </tbody>
-</table>
-</div>
+            </td>
+        </tr>
+        <div id="modaledit{{row.cs_ref}}" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">อัพเดทข้อมูลของท่าน</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/update" method="POST">
+                            <div class="form-group">
+                                <label for="branch-show">ฝ่าย / สาขา:</label>
+                                <input type="hidden" name="cs_ref" value="{{row.cs_ref}}">
+                                <input type="hidden" name="dept" id="dept">
+                                <input type="text"  class="form-control"  list="branchdata" id="branch-show" name="branch-show"/>
 
+                            </div>
+                            <div class="form-group">
+                                <label>รายการ ปปง.</label>
+                                <select name="amlo_is" class="form-control">
+                                    <option value="True" {% if row.amlo_is== True %}selected{% endif %}>True</option>
+                                    <option value="False" {% if row.amlo_is== False %}selected{% endif %}>False</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>อัพเดท ปปง. </label>
+                                <select name="amlo_done" class="form-control">
+                                    <option value="True" {% if row.amlo_done== True %}selected{% endif %}>True</option>
+                                    <option value="False" {% if row.amlo_done== False %}selected{% endif %}>False
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit">อัพเดท</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+        </tbody>
+    </table>
+</div>
+ <datalist id="branchdata">
+    {% for branch in branches %}
+     <option data-value="{{branch.branch_id}}" value="{{branch.branch_name}}">
+    {% endfor %}
+</datalist>
 <a href="/form_insert" class="btn btn-primary"> ADD </a>
 <style>
 .table-responsive-md {
@@ -125,4 +134,19 @@
   overflow-y: auto;
 }
 </style>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+ <script type="text/javascript">
+    $(document).ready(function() {
+      $("#branch-show").on("input", function() {
+        var selectedOption = $("#branchdata option[value='" + this.value + "']");
+        if (selectedOption.length) {
+          $("#dept").val(selectedOption.data("value"));
+          alert(selectedOption.data("value"));
+        }
+      });
+    });
+</script>
 {% endblock %}

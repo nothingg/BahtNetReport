@@ -1,6 +1,6 @@
 from website import app
 from flask import render_template, Blueprint, request, redirect, url_for, flash
-from website.models import Reports
+from website.models import Reports , Branch
 from website import db
 from datetime import datetime, time
 
@@ -17,10 +17,12 @@ current_time = datetime.now(timezone)
 @routes.route('/')
 def list_data():
     items = Reports.query.order_by(Reports.cs_ref.desc()).all()
+    branch = Branch.query.order_by(Branch.branch_id).all()
+
     # items = db.session.execute(db.select(Reports)).fetchall()
     # items = db.session.query(Reports).all()
     # items = db.session.scalar(select(Reports)).all()
-    return render_template('list_data_orm.html', data=items)
+    return render_template('list_data_orm.html', data=items , branches = branch)
 
 
 @routes.route('/upload', methods=['GET', 'POST'])
