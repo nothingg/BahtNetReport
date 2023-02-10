@@ -12,3 +12,11 @@ edit
 -- Change don't new page. make to slide down
 -- Branch
 -- ปปง
+
+20240210
+- Database
+-- Create Branch
+-- Import branch data
+
+- Page Upadate
+-- List branch from db

@@ -4,6 +4,11 @@ import pytz
 
 thailand_tz = pytz.timezone("Asia/Bangkok")
 
+class Branch(db.Model):
+    branch_id = db.Column(db.String, primary_key=True)
+    branch_name = db.Column(db.String)
+    branch_desc = db.Column(db.String)
+
 # create the extension
 class Reports(db.Model):
     # __tablename__ = 'reports'
@@ -35,6 +40,8 @@ class Reports(db.Model):
 
     def __repr__(self):
         return "<Reports : "+ str(self.instruction_id)
+
+
 
 
 # Base = declarative_base()
