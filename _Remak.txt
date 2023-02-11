@@ -20,3 +20,18 @@ edit
 
 - Page Upadate
 -- List branch from db
+
+20230211
+- Page Insert
+-- change form , list specify data ( ใช้กับ bahtnet ขารับ ของเงินสด เพราะไม่ใช่ pac008 )
+--- cs_ref ,mt , dr_bic , cr_bic , cr_amt (เนื่องจากเป็นขารับ) , status = C (Complete) , ch = w (Web) , transmission_type ( ขารับเป็นอะไรไปเช็คก่อน แล้วค่อย fix ค่า) , time , dept , report_date
+
+
+Other
+- Create Table Bank
+- Mapping Bank on display
+- Upload file ซ้ำในวันไม่ต้องทับข้อมูลเดิม ให้เพิ่มเฉพาะข้อมูลใหม่ เนื่องจากมีบางวันที่มีรายการหลัง 15.30
+- Delete ข้อมูลวันนั้นทิ้ง - ทำเพื่อไว้ก่อนกรณีที่ต้องการ upload ใหม่ ทั้งหมด
+- หน้าแรก ให้ filter เฉพาะวันปัจจุบันก่อน
+- export excel
+- หาวิธีเปิด window แล้ว run python เลย
