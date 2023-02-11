@@ -17,9 +17,10 @@ current_time = datetime.now(timezone)
 @routes.route('/')
 def list_data():
     # items = Reports.query.order_by(Reports.cs_ref.desc()).all()
-    branch = Branch.query.order_by(Branch.branch_id).all()
     #items = db.session.query(Reports ,Branch).join(Branch, Reports.dept == Branch.branch_id).all()
+    branch = Branch.query.order_by(Branch.branch_id).all()
     items = db.session.query(Reports, Branch).outerjoin(Branch, Reports.dept == Branch.branch_id).all()
+
     return render_template('list_data_orm.html', data=items , branches = branch)
 
 
@@ -138,8 +139,9 @@ def form_update(id_data):
 def update():
     if request.method == 'POST':
         item = Reports.query.get(request.form['cs_ref'])
-        
-        item.dept = request.form['dept']
+        branch = Branch.query.filter(Branch.branch_name == request.form['branch-show']).first()
+        item.dept = branch.branch_id
+        # item.dept = request.form['dept']
         item.amlo_is = ast.literal_eval(request.form['amlo_is'])
         item.amlo_done = ast.literal_eval(request.form['amlo_done'])
 

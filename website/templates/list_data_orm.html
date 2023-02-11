@@ -31,7 +31,7 @@
             <th scope="col">dept</th>
             <th scope="col">input_type</th>
             <th scope="col">amlo_is</th>
-            <th scope="col">amlo_true</th>
+            <th scope="col">amlo_done</th>
             <th scope="col"></th>
 
         </tr>
@@ -139,7 +139,7 @@
 {% block scripts %}
   {{ super() }}
  <script type="text/javascript">
-    $(document).ready(function() {
+    /* $(document).ready(function() {
       $("#branch-show").on("input", function() {
         var selectedOption = $("#branchdata option[value='" + this.value + "']");
         if (selectedOption.length) {
@@ -147,6 +147,6 @@
           alert(selectedOption.data("value"));
         }
       });
-    });
+    });*/
 </script>
 {% endblock %}
