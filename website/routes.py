@@ -3,6 +3,7 @@ from flask import render_template, Blueprint, request, redirect, url_for, flash
 from website.models import Reports , Branch
 from website import db
 from datetime import datetime, time
+from sqlalchemy.exc import IntegrityError
 
 import os
 import pandas as pd
@@ -81,7 +82,36 @@ def upload_file():
             engine = db.engine
 
             # Insert the data into the PostgreSQL database
-            data.to_sql('reports', engine, if_exists='append', index=False)
+            # data.to_sql('reports', engine, if_exists='append', index=False)
+
+            for index, row in data.iterrows():
+                try:
+                    model = Reports(cs_ref=row['cs_ref'],
+                                instruction_id=row['instruction_id'],
+                                mt=row['mt'],
+                                ctgypurp=row['ctgypurp'],
+                                dr_bic=row['dr_bic'],
+                                dr_acct=row['dr_acct'],
+                                cr_bic=row['cr_bic'],
+                                cr_acct=row['cr_acct'],
+                                dr_amt=row['dr_amt'],
+                                cr_amt=row['cr_amt'],
+                                status=row['status'],
+                                error=row['error'],
+                                # time=row['time'],
+                                ch=row['ch'],
+                                transmission_type=row['transmission_type'],
+                                debtor_acct=row['debtor_acct'],
+                                debtor_name=row['debtor_name'],
+                                creditor_acct=row['creditor_acct'],
+                                creditor_name=row['creditor_name'],
+                                report_time=row['report_time'],
+                                created_date=row['created_date'],
+                                input_type=row['input_type'] )
+                    db.session.add(model)
+                    db.session.commit()
+                except IntegrityError:
+                    db.session.rollback()
 
             flash('Upload successful!', category='success')
         else:
