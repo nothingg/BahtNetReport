@@ -1,0 +1,20 @@
+Report,Funds Transfer,,,,,,,,,,,,,,,,,
+Transmission Type,ALL,,,,,,,,,,,,,,,,,
+AccNum,001-000736-9,,,,,,,,,,,,,,,,,
+Debit BIC,GOHUTHB1,,,,,,,,,,,,,,,,,
+Credit BIC,ALL,,,,,,,,,,,,,,,,,
+Settlement Date,17/01/2023,,,,,,,,,,,,,,,,,
+Received Date,ALL,,,,,,,,,,,,,,,,,
+Instruction ID,,,,,,,,,,,,,,,,,,
+Time From,,,,,,,,,,,,,,,,,,
+To,,,,,,,,,,,,,,,,,,
+Message Type,p008,,,,,,,,,,,,,,,,,
+Category Purpose,RFT,,,,,,,,,,,,,,,,,
+Debit Amount From,,,,,,,,,,,,,,,,,,
+To,,,,,,,,,,,,,,,,,,
+Credit Amount From,,,,,,,,,,,,,,,,,,
+To,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+CS Ref.,Instruction ID,MT,CtgyPurp,Dr BIC,Dr Acc,Cr BIC,Cr Acc,Dr Amt,Cr Amt,Status,Error,Time,CH,Transmission Type,Debtor Acc,Debtor Name,Creditor Acc,Creditor Name
+230117002033,'GHB/UPD000063/2023,p008,RFT,GOHUTHB1,001-000736-9,SICOTHBK,001-003792-6,"3,660,144.30",,C,,08.59.49,W,Outgoing,'548531,SUPALAI PUBLIC COMPANY LIMITED,'2383000014,SUPALAI PUBLIC COMPANY LIMITED
+330117002033,'GHB/UPD000063/2023,p008,RFT,GOHUTHB1,001-000736-9,SICOTHBK,001-003792-6,"3,660,144.30",,C,,08.59.49,W,Outgoing,'548531,SUPALAI PUBLIC COMPANY LIMITED,'2383000014,SUPALAI PUBLIC COMPANY LIMITED

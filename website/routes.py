@@ -1,6 +1,6 @@
 from website import app
 from flask import render_template, Blueprint, request, redirect, url_for, flash
-from website.models import Reports , Branch
+from website.models import Reports, Branch
 from website import db
 from datetime import datetime, time
 from sqlalchemy.exc import IntegrityError
@@ -18,20 +18,22 @@ current_time = datetime.now(timezone)
 @routes.route('/')
 def list_data():
     # items = Reports.query.order_by(Reports.cs_ref.desc()).all()
-    #items = db.session.query(Reports ,Branch).join(Branch, Reports.dept == Branch.branch_id).all()
+    # items = db.session.query(Reports ,Branch).join(Branch, Reports.dept == Branch.branch_id).all()
     branch = Branch.query.order_by(Branch.branch_id).all()
     items = db.session.query(Reports, Branch).outerjoin(Branch, Reports.dept == Branch.branch_id).all()
 
-    return render_template('list_data_orm.html', data=items , branches = branch)
+    return render_template('list_data_orm.html', data=items, branches=branch)
 
 
 @routes.route('/upload', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         file = request.files['file_upload']
+        report_date = request.form['report_date']
 
         if file and file.filename != '':
             data = pd.read_csv(file, skiprows=17)
+
             # change the header of the dataframe
             data = data.rename(columns={'CS Ref.': 'cs_ref',
                                         'Instruction ID': 'instruction_id',
@@ -59,11 +61,10 @@ def upload_file():
             data['creditor_acct'] = data['creditor_acct'].str.replace("^'", "", regex=True)
 
             # check if there are any non-null values in a column
-            if data['dr_amt'].notnull().values.any():
-                data['dr_amt'] = data['dr_amt'].str.replace(",", "").astype(float)
-
-            if data['cr_amt'].notnull().values.any():
-                data['cr_amt'] = data['dr_amt'].str.replace(",", "").astype(float)
+            data['dr_amt'] = data['dr_amt'].str.replace(",", "").astype(float) if data[
+                'dr_amt'].notnull().values.any() else 0
+            data['cr_amt'] = data['cr_amt'].str.replace(",", "").astype(float) if data[
+                'cr_amt'].notnull().values.any() else 0
 
             # covert Time
             # replace '.' with ':'
@@ -79,35 +80,42 @@ def upload_file():
             data['input_type'] = 'upload'
 
             # Connect to your database using the SQLAlchemy engine
-            engine = db.engine
+            # engine = db.engine
 
             # Insert the data into the PostgreSQL database
             # data.to_sql('reports', engine, if_exists='append', index=False)
 
+            # data = data.where((pd.notnull(data)), None)
+            data = data.fillna('')
+
             for index, row in data.iterrows():
                 try:
                     model = Reports(cs_ref=row['cs_ref'],
-                                instruction_id=row['instruction_id'],
-                                mt=row['mt'],
-                                ctgypurp=row['ctgypurp'],
-                                dr_bic=row['dr_bic'],
-                                dr_acct=row['dr_acct'],
-                                cr_bic=row['cr_bic'],
-                                cr_acct=row['cr_acct'],
-                                dr_amt=row['dr_amt'],
-                                cr_amt=row['cr_amt'],
-                                status=row['status'],
-                                error=row['error'],
-                                # time=row['time'],
-                                ch=row['ch'],
-                                transmission_type=row['transmission_type'],
-                                debtor_acct=row['debtor_acct'],
-                                debtor_name=row['debtor_name'],
-                                creditor_acct=row['creditor_acct'],
-                                creditor_name=row['creditor_name'],
-                                report_time=row['report_time'],
-                                created_date=row['created_date'],
-                                input_type=row['input_type'] )
+                                    instruction_id=row['instruction_id'],
+                                    mt=row['mt'],
+                                    ctgypurp=row['ctgypurp'],
+                                    dr_bic=row['dr_bic'],
+                                    dr_acct=row['dr_acct'],
+                                    cr_bic=row['cr_bic'],
+                                    cr_acct=row['cr_acct'],
+                                    # dr_amt=float(row['dr_amt']) if row['dr_amt'] else None,
+                                    # cr_amt=float(row['cr_amt']) if row['cr_amt'] else None,
+                                    dr_amt=row['dr_amt'],
+                                    cr_amt=row['cr_amt'],
+                                    status=row['status'],
+                                    error=row['error'],
+                                    time=row['time'],
+                                    ch=row['ch'],
+                                    transmission_type=row['transmission_type'],
+                                    debtor_acct=row['debtor_acct'],
+                                    debtor_name=row['debtor_name'],
+                                    creditor_acct=row['creditor_acct'],
+                                    creditor_name=row['creditor_name'],
+                                    report_date=report_date,
+                                    report_time=row['report_time'],
+                                    created_date=row['created_date'],
+                                    input_type=row['input_type'],
+                                    amlo_is=False, amlo_done=False)
                     db.session.add(model)
                     db.session.commit()
                 except IntegrityError:
