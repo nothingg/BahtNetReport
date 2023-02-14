@@ -1,6 +1,6 @@
 from website import app
 from flask import render_template, Blueprint, request, redirect, url_for, flash
-from website.models import Reports, Branch
+from website.models import Reports, Branch , Banks
 from website import db
 from datetime import datetime, time
 from sqlalchemy.exc import IntegrityError
@@ -78,14 +78,6 @@ def upload_file():
 
             data['created_date'] = current_time
             data['input_type'] = 'upload'
-
-            # Connect to your database using the SQLAlchemy engine
-            # engine = db.engine
-
-            # Insert the data into the PostgreSQL database
-            # data.to_sql('reports', engine, if_exists='append', index=False)
-
-            # data = data.where((pd.notnull(data)), None)
             data = data.fillna('')
 
             for index, row in data.iterrows():
@@ -115,7 +107,11 @@ def upload_file():
                                     report_time=row['report_time'],
                                     created_date=row['created_date'],
                                     input_type=row['input_type'],
-                                    amlo_is=False, amlo_done=False)
+                                    amlo_is=False, amlo_done=False ,
+                                    dept = '99999' if 'GHB/UPD' in  row['instruction_id'] else None ,
+                                    dr_bank = get_bank_short(row['dr_bic']) ,
+                                    cr_bank = get_bank_short(row['cr_bic'])
+                                    )
                     db.session.add(model)
                     db.session.commit()
                 except IntegrityError:
@@ -127,6 +123,10 @@ def upload_file():
 
     return render_template('upload_transfer.html')
 
+def get_bank_short(bank_bic):
+    banks = Banks.query.filter(Banks.bank_bic == bank_bic ).first()
+    rs = banks.bank_short if banks else None
+    return rs
 
 @routes.route('/form_insert')
 def form_insert():
@@ -220,6 +220,17 @@ def delete(id_data):
 
     flash('Delete successful!', category='success')
     return redirect(url_for('routes.list_data'))
+
+@routes.route('/delete_date' , methods=['GET', 'POST'])
+def delete_by_date():
+    if request.method == 'POST':
+        date_data = request.form['report_date']
+        Reports.query.filter(Reports.report_date == date_data).delete(synchronize_session=False)
+
+        db.session.commit()
+        flash('Delete successful!', category='success')
+
+    return render_template('delete_date.html')
 
 # @routes.route('/edit' , methods=['GET', 'POST'])
 # def edit_data():

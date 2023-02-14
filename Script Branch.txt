@@ -1000,3 +1000,29 @@ VALUES(22100, 'สาขาไอทีสแควร์                       
 INSERT INTO branch
 (branch_id, branch_name, branch_desc)
 VALUES(19700, 'ศูนย์บริการดิจิทัล (DSC)                          ', 'ศูนย์บริการดิจิทัล (DSC)                          ');
+INSERT INTO branch
+(branch_id, branch_name, branch_desc)
+VALUES(99999, 'นิติกรรม', 'นิติกรรม');
+INSERT INTO branch
+(branch_id, branch_name, branch_desc)
+VALUES(999999, 'นิติกรรม', 'นิติกรรม');
+
+INSERT INTO branch
+(branch_id, branch_name, branch_desc)
+VALUES(999998, 'เงินสด', 'เงินสด');
+
+INSERT INTO branch
+(branch_id, branch_name, branch_desc)
+VALUES(999998, 'ประปา', 'ประปา');
+
+INSERT INTO branch
+(branch_id, branch_name, branch_desc)
+VALUES(999998, 'ใบคอม', 'ใบคอม');
+
+INSERT INTO branch
+(branch_id, branch_name, branch_desc)
+VALUES(999998, 'ส่งคืน', 'ส่งคืน');
+
+update branch set branch_name = trim(branch_name) ;
+
+update branch set branch_desc = trim(branch_desc) ;

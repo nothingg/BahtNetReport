@@ -1,0 +1,37 @@
+-- public.reports definition
+
+-- Drop table
+
+-- DROP TABLE public.reports;
+
+CREATE TABLE public.reports (
+	cs_ref varchar NOT NULL,
+	instruction_id varchar NULL,
+	mt varchar NULL,
+	ctgypurp varchar NULL,
+	dr_bic varchar NULL,
+	dr_acct varchar NULL,
+	cr_bic varchar NULL,
+	cr_acct varchar NULL,
+	dr_amt numeric NULL,
+	cr_amt numeric NULL,
+	status varchar NULL,
+	error varchar NULL,
+	"time" varchar NULL,
+	ch varchar NULL,
+	transmission_type varchar NULL,
+	debtor_acct varchar NULL,
+	debtor_name varchar NULL,
+	creditor_acct varchar NULL,
+	creditor_name varchar NULL,
+	dept varchar NULL,
+	report_date date NULL,
+	report_time time NULL,
+	created_date timestamp NULL,
+	input_type varchar NULL,
+	amlo_is bool NULL DEFAULT false,
+	amlo_done bool NULL DEFAULT false,
+	dr_bank varchar NULL,
+	cr_bank varchar NULL,
+	CONSTRAINT reports_cs_ref PRIMARY KEY (cs_ref)
+);

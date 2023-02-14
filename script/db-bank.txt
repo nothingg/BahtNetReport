@@ -1,0 +1,10 @@
+-- public.banks definition
+
+-- Drop table
+
+-- DROP TABLE public.banks;
+
+CREATE TABLE public.banks (
+	bank_bic varchar NULL,
+	bank_short varchar NULL
+);

@@ -4,6 +4,10 @@ import pytz
 
 thailand_tz = pytz.timezone("Asia/Bangkok")
 
+class Banks(db.Model):
+    bank_bic = db.Column(db.String, primary_key=True)
+    bank_short = db.Column(db.String)
+
 class Branch(db.Model):
     branch_id = db.Column(db.String, primary_key=True)
     branch_name = db.Column(db.String)
@@ -40,6 +44,8 @@ class Reports(db.Model):
     input_type = db.Column(db.String)
     amlo_is = db.Column(db.Boolean)
     amlo_done = db.Column(db.Boolean)
+    dr_bank = db.Column(db.String)
+    cr_bank = db.Column(db.String)
 
     def __repr__(self):
         return "<Reports : "+ str(self.instruction_id)

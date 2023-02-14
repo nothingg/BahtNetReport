@@ -1,0 +1,11 @@
+-- public.branch definition
+
+-- Drop table
+
+-- DROP TABLE public.branch;
+
+CREATE TABLE public.branch (
+	branch_id varchar NULL,
+	branch_name varchar NULL,
+	branch_desc varchar NULL
+);
