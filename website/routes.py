@@ -4,6 +4,7 @@ from website.models import Reports, Branch , Banks
 from website import db
 from datetime import datetime, time
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy import text
 
 import os
 import pandas as pd
@@ -15,14 +16,25 @@ timezone = pytz.timezone("Asia/Bangkok")
 current_time = datetime.now(timezone)
 
 
-@routes.route('/')
+@routes.route('/', methods=['GET', 'POST'])
 def list_data():
     # items = Reports.query.order_by(Reports.cs_ref.desc()).all()
     # items = db.session.query(Reports ,Branch).join(Branch, Reports.dept == Branch.branch_id).all()
-    branch = Branch.query.order_by(Branch.branch_id).all()
-    items = db.session.query(Reports, Branch).outerjoin(Branch, Reports.dept == Branch.branch_id).all()
 
-    return render_template('list_data_orm.html', data=items, branches=branch)
+    date_format = '%Y-%m-%d'
+    report_date = datetime.now().strftime(date_format)
+    print('rpt date : ' + report_date)
+    if request.method == 'POST':
+        report_date = request.form['report_date']
+
+    branch = Branch.query.order_by(Branch.branch_id).all()
+    items = db.session.query(Reports, Branch).outerjoin(Branch, Reports.dept == Branch.branch_id).filter(Reports.report_date == report_date).all()
+
+    # result = db.session.execute("SELECT * FROM my_model WHERE value < :value", {'value': 5.0})
+    dr_normal = db.session.execute(text("select count(*) as dr_count , sum(dr_amt) as dr_amt from  public.reports a where dept not in ('88828','99999','999998','999997') or dept is null and report_date = '2023-02-17'")).fetchone()
+
+
+    return render_template('list_data_orm.html', data=items, branches=branch , report_date = report_date , dr_normal = dr_normal)
 
 
 @routes.route('/upload', methods=['GET', 'POST'])
@@ -108,7 +120,7 @@ def upload_file():
                                     created_date=row['created_date'],
                                     input_type=row['input_type'],
                                     amlo_is=False, amlo_done=False ,
-                                    dept = '99999' if 'GHB/UPD' in  row['instruction_id'] else None ,
+                                    dept = '999999' if 'GHB/UPD' in  row['instruction_id'] else None ,
                                     dr_bank = get_bank_short(row['dr_bic']) ,
                                     cr_bank = get_bank_short(row['cr_bic'])
                                     )
@@ -182,28 +194,6 @@ def update():
         # item.dept = request.form['dept']
         item.amlo_is = ast.literal_eval(request.form['amlo_is'])
         item.amlo_done = ast.literal_eval(request.form['amlo_done'])
-
-        # print(item)
-        # item.instruction_id = request.form['instruction_id']
-        # item.mt = request.form['mt']
-        # item.ctgypurp = request.form['ctgypurp']
-        # item.dr_bic = request.form['dr_bic']
-        # item.dr_acct = request.form['dr_acct']
-        # item.cr_bic = request.form['cr_bic']
-        # item.cr_acct = request.form['cr_acct']
-        # item.dr_amt = request.form['dr_amt']
-        # item.cr_amt = request.form['cr_amt']
-        # item.status = request.form['status']
-        # item.error = request.form['error']
-        # item.time = request.form['time']
-        # item.ch = request.form['ch']
-        # item.transmission_type = request.form['transmission_type']
-        # item.debtor_acct = request.form['debtor_acct']
-        # item.debtor_name = request.form['debtor_name']
-        # item.creditor_acct = request.form['creditor_acct']
-        # item.creditor_name = request.form['creditor_name']
-        # item.dept = request.form['dept']
-        # item. = request.form['']
 
         db.session.commit()
 

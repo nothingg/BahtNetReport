@@ -2,7 +2,24 @@
 
 {% block content %}
 
-<h1 align="center"> Notes</h1>
+<h1 align="center"> Notes - {{ report_date }} </h1>
+
+
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">report_date</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="report_date" placeholder="EX -> YYYY-mm-dd" required
+                   pattern="^\d{4}-\d{2}-\d{2}$"
+                   title="Format Date incorrect">
+        </div>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
 <div class="table-responsive-md">
     <table class="table table-striped">
         <thead>
@@ -132,6 +149,12 @@
     {% endfor %}
 </datalist>
 <a href="/form_insert" class="btn btn-primary"> ADD </a>
+
+<br><br><br><br>
+
+count :  {{ dr_normal.dr_count }} <br>
+amount : {{ dr_normal.dr_amt }}
+
 <style>
 .table-responsive-md {
   max-height: 500px;
