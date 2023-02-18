@@ -28,13 +28,28 @@ def list_data():
         report_date = request.form['report_date']
 
     branch = Branch.query.order_by(Branch.branch_id).all()
-    items = db.session.query(Reports, Branch).outerjoin(Branch, Reports.dept == Branch.branch_id).filter(Reports.report_date == report_date).all()
+    items = db.session.query(Reports, Branch).outerjoin(Branch, Reports.dept == Branch.branch_id)\
+                        .filter(Reports.report_date == report_date)\
+                        .order_by(Reports.report_time.asc()).all()
 
     # result = db.session.execute("SELECT * FROM my_model WHERE value < :value", {'value': 5.0})
-    dr_normal = db.session.execute(text("select count(*) as dr_count , sum(dr_amt) as dr_amt from  public.reports a where dept not in ('88828','99999','999998','999997') or dept is null and report_date = '2023-02-17'")).fetchone()
+    dr_normal = db.session.execute(text("select trim(TO_CHAR(count(*) , 'FM999,999,999,999'))  as dr_count  , " \
+                                        "trim(TO_CHAR(sum(dr_amt) , '999,999,999,999.99'))  as dr_sum "\
+                                        "from  public.reports a " \
+                                        "where ( dept not in ('88828','999999','999998','999997') or dept is null ) and  dr_bic = 'GOHUTHB1' " \
+                                        "and report_date = '" + report_date+"'")).fetchone()
 
+    dr_nitikum = db.session.execute(text("select trim(TO_CHAR(count(*) , 'FM999,999,999,999'))  as dr_count  , " \
+                                        "trim(TO_CHAR(sum(dr_amt) , '999,999,999,999.99'))  as dr_sum " \
+                                        "from  public.reports a " \
+                                        "where dept = '999999' and  dr_bic = 'GOHUTHB1' and report_date = '" + report_date + "'")).fetchone()
 
-    return render_template('list_data_orm.html', data=items, branches=branch , report_date = report_date , dr_normal = dr_normal)
+    cr_normal = db.session.execute(text("select trim(TO_CHAR(count(*) , 'FM999,999,999,999'))  as cr_count  , " \
+                                         "trim(TO_CHAR(sum(cr_amt) , '999,999,999,999.99'))  as cr_sum " \
+                                         "from  public.reports a " \
+                                         "where  dr_bic != 'GOHUTHB1' and report_date = '" + report_date + "'")).fetchone()
+
+    return render_template('list_data_orm.html', data=items, branches=branch , report_date = report_date , dr_normal = dr_normal , dr_nitikum = dr_nitikum , cr_normal = cr_normal)
 
 
 @routes.route('/upload', methods=['GET', 'POST'])
