@@ -16,6 +16,7 @@ timezone = pytz.timezone("Asia/Bangkok")
 current_time = datetime.now(timezone)
 
 
+
 @routes.route('/', methods=['GET', 'POST'])
 def list_data():
     # items = Reports.query.order_by(Reports.cs_ref.desc()).all()
@@ -51,6 +52,26 @@ def list_data():
 
     return render_template('list_data_orm.html', data=items, branches=branch , report_date = report_date , dr_normal = dr_normal , dr_nitikum = dr_nitikum , cr_normal = cr_normal)
 
+@routes.route('/niti', methods=['GET', 'POST'])
+def list_niti():
+    date_format = '%Y-%m-%d'
+    report_date = datetime.now().strftime(date_format)
+    print('rpt date : ' + report_date)
+    if request.method == 'POST':
+        report_date = request.form['report_date']
+
+    branch = Branch.query.order_by(Branch.branch_id).all()
+    items = db.session.query(Reports, Branch).outerjoin(Branch, Reports.dept == Branch.branch_id) \
+        .filter(Reports.report_date == report_date) \
+        .filter(Reports.dept == '999999').filter(Reports.dr_bic == 'GOHUTHB1') \
+        .order_by(Reports.report_time.asc()).all()
+
+    dr_nitikum = db.session.execute(text("select trim(TO_CHAR(count(*) , 'FM999,999,999,999'))  as dr_count  , " \
+                                         "trim(TO_CHAR(sum(dr_amt) , '999,999,999,999.99'))  as dr_sum " \
+                                         "from  public.reports a " \
+                                         "where dept = '999999' and  dr_bic = 'GOHUTHB1' and report_date = '" + report_date + "'")).fetchone()
+
+    return render_template('list_niti.html', data=items, branches=branch , report_date = report_date , dr_nitikum = dr_nitikum )
 
 @routes.route('/upload', methods=['GET', 'POST'])
 def upload_file():
@@ -109,6 +130,10 @@ def upload_file():
 
             for index, row in data.iterrows():
                 try:
+                    row['amlo_is'] = False
+                    if row['cr_bic'] == 'GOHUTHB1' and row['creditor_acct'] != '0010007369'and row['cr_amt'] >= 700000 :
+                        row['amlo_is'] = True
+
                     model = Reports(cs_ref=row['cs_ref'],
                                     instruction_id=row['instruction_id'],
                                     mt=row['mt'],
@@ -134,7 +159,7 @@ def upload_file():
                                     report_time=row['report_time'],
                                     created_date=row['created_date'],
                                     input_type=row['input_type'],
-                                    amlo_is=False, amlo_done=False ,
+                                    amlo_is=row['amlo_is'], amlo_done=False ,
                                     dept = '999999' if 'GHB/UPD' in  row['instruction_id'] else None ,
                                     dr_bank = get_bank_short(row['dr_bic']) ,
                                     cr_bank = get_bank_short(row['cr_bic'])

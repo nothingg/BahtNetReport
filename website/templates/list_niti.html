@@ -24,79 +24,27 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">dr_bank</th>
-            <th scope="col">dr_acct</th>
             <th scope="col">cr_bank</th>
-            <th scope="col">cr_acct</th>
             <th scope="col">dr_amt</th>
-            <th scope="col">cr_amt</th>
-             <th scope="col">date</th>
-            <th scope="col">time</th>
-            <th scope="col">debtor_acct</th>
-            <th scope="col">debtor_name</th>
-            <th scope="col">creditor_acct</th>
-            <th scope="col">creditor_name</th>
-            <th scope="col">dept</th>
-            <th scope="col">amlo_is</th>
-            <th scope="col">amlo_done</th>
-            <!--
-            <th scope="col">#</th>
-            <th scope="col">cs_ref</th>
-            <th scope="col">instruction_id</th>
-            <th scope="col">mt</th>
-            <th scope="col">ctgypurp</th>
-            <th scope="col">dr_bic</th>
-            <th scope="col">cr_bic</th>
-            <th scope="col">status</th>
-            <th scope="col">error</th>
-            <th scope="col">ch</th>
-            <th scope="col">transmission_type</th>
-            <th scope="col">input_type</th>
-            -->
-            <th scope="col"></th>
+
+<!--            <th scope="col"></th>-->
 
         </tr>
         </thead>
         <tbody>
         {% for reports , branch in data %}
         <tr>
-            <td> {{ reports.dr_bank}}</td>
-            <td> {{ reports.dr_acct}}</td>
             <td> {{ reports.cr_bank}}</td>
-            <td> {{ reports.cr_acct}}</td>
-            <td> {{ reports.dr_amt }}</td>
-            <td> {{ reports.cr_amt}}</td>
-            <td> {{ reports.report_date}}</td>
-            <td> {{ reports.report_time}}</td>
-            <td> {{ reports.debtor_acct}}</td>
-            <td> {{ reports.debtor_name}}</td>
-            <td> {{ reports.creditor_acct}}</td>
-            <td> {{ reports.creditor_name}}</td>
-            <td> {{ branch.branch_name}}</td>
-            <td> {{ reports.amlo_is }}</td>
-            <td> {{ reports.amlo_done }}</td>
-            <!--
-            <th scope="row"></th>
-            <td> {{ reports.cs_ref}}</td>
-            <td> {{ reports.instruction_id }}</td>
-            <td> {{ reports.mt}}</td>
-            <td> {{ reports.ctgypurp}}</td>
-            <td> {{ reports.dr_bic}}</td>
-            <td> {{ reports.cr_bic}}</td>
-            <td> {{ reports.status}}</td>
-            <td> {{ reports.error}}</td>
-            <td> {{ reports.ch}}</td>
-            <td> {{ reports.transmission_type}}</td>
-            <td> {{ reports.input_type }}</td>
-            -->
-            <td>
-                <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{reports.cs_ref}}">Edit</a>
-<!--                <a href="/form_update/{{ reports.cs_ref }}" class="btn btn-warning btn-xs">Edit</a>-->
-                {% if reports.input_type != 'upload' %}
-                <a href="/delete/{{ reports.cs_ref }}" class="btn btn-danger btn-xs"
-                   onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>
-                {% endif %}
-            </td>
+            <td> {{ "{:,.2f}".format(reports.dr_amt) }} </td>
+
+
+<!--            <td>-->
+<!--                <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{reports.cs_ref}}">Edit</a>-->
+<!--                {% if reports.input_type != 'upload' %}-->
+<!--                <a href="/delete/{{ reports.cs_ref }}" class="btn btn-danger btn-xs"-->
+<!--                   onclick="return confirm('คุณต้องการลบข้อมูลหรือไม่?')">Delete</a>-->
+<!--                {% endif %}-->
+<!--            </td>-->
 
         </tr>
         <div id="modaledit{{reports.cs_ref}}" class="modal fade" role="dialog">
@@ -154,21 +102,10 @@
 
 <br><br><br><br>
 
-<h3> ขาออกปกติ </h3>
-count :  {{ dr_normal.dr_count }} <br>
-amount : {{ dr_normal.dr_sum }}
-
-<br><br><br><br>
 
 <h3> ขาออก นิติกรรม </h3>
 count :  {{ dr_nitikum.dr_count }} <br>
 amount : {{ dr_nitikum.dr_sum }}
-
-<h3> ขาเข้าปกติ </h3>
-count :  {{ cr_normal.cr_count }} <br>
-amount : {{ cr_normal.cr_sum }}
-
-<br><br><br><br>
 
 <style>
 .table-responsive-md {
