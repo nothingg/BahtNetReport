@@ -182,7 +182,8 @@ def get_bank_short(bank_bic):
 
 @routes.route('/form_insert')
 def form_insert():
-    return render_template('form_insert.html')
+    branch = Branch.query.order_by(Branch.branch_id).all()
+    return render_template('form_insert.html' , branches=branch)
 
 
 @routes.route('/insert', methods=['GET', 'POST'])
