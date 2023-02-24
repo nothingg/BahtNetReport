@@ -182,33 +182,37 @@ def get_bank_short(bank_bic):
 
 @routes.route('/form_insert')
 def form_insert():
+    bank = Banks.query.order_by(Banks.bank_bic).all()
     branch = Branch.query.order_by(Branch.branch_id).all()
-    return render_template('form_insert.html' , branches=branch)
+    return render_template('form_insert.html' , branches=branch , banks = bank)
 
 
 @routes.route('/insert', methods=['GET', 'POST'])
 def insert():
     if request.method == 'POST':
         report = Reports(
-            cs_ref=request.form['cs_ref'],
-            instruction_id=request.form['instruction_id'],
-            mt=request.form['mt'],
-            ctgypurp=request.form['ctgypurp'],
-            dr_bic=request.form['dr_bic'],
-            dr_acct=request.form['dr_acct'],
-            cr_bic=request.form['cr_bic'],
-            cr_acct=request.form['cr_acct'],
+            cs_ref = Reports.query.count() + 1,
+            # instruction_id=request.form['instruction_id'],
+            # mt=request.form['mt'],
+            # ctgypurp=request.form['ctgypurp'],
+            # dr_bic=request.form['dr_bic'],
+            # dr_acct=request.form['dr_acct'],
+            # cr_bic=request.form['cr_bic'],
+            # cr_acct=request.form['cr_acct'],
             dr_amt=float(request.form['dr_amt']) if request.form['dr_amt'] else None,
             cr_amt=float(request.form['cr_amt']) if request.form['cr_amt'] else None,
-            status=request.form['status'],
-            error=request.form['error'],
-            report_time=request.form['report_time'],
-            ch=request.form['ch'],
-            transmission_type=request.form['transmission_type'],
-            debtor_acct=request.form['debtor_acct'],
-            debtor_name=request.form['debtor_name'],
-            creditor_acct=request.form['creditor_acct'],
-            creditor_name=request.form['creditor_name'],
+            # status=request.form['status'],
+            # error=request.form['error'],
+            # report_time=request.form['report_time'],
+            # ch=request.form['ch'],
+            # transmission_type=request.form['transmission_type'],
+            # debtor_acct=request.form['debtor_acct'],
+            # debtor_name=request.form['debtor_name'],
+            # creditor_acct=request.form['creditor_acct'],
+            # creditor_name=request.form['creditor_name'],
+            amlo_is=False, amlo_done=False,
+            dr_bank=request.form['dr_bank'],
+            cr_bank=request.form['cr_bank'],
             dept=request.form['dept'],
             report_date=request.form['report_date'],
             created_date=current_time,

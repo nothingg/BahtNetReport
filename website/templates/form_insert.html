@@ -5,28 +5,44 @@
 
 <form action="{{ url_for('routes.insert') }}" method="post">
     <div class="row mb-3">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_bic</label>
+        <label for="colFormLabel" class="col-sm-2 col-form-label">report_date</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control"  name="dr_bic">
+          <input type="text" class="form-control" name="report_date" placeholder="EX -> YYYY-mm-dd" required
+                 pattern="^\d{4}-\d{2}-\d{2}$"
+                 title="Format Date incorrect">
         </div>
     </div>
     <div class="row mb-3">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_bic</label>
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_bank</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control"  name="cr_bic">
+          <input type="text" class="form-control"  name="dr_bank" list="bankdata" required>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">cr_bank</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  name="cr_bank" list="bankdata" required >
+
         </div>
     </div>
      <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">cr_amt</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control"  name="cr_amt">
+          <input type="number" class="form-control"  name="cr_amt" required>
         </div>
     </div>
+    <div class="row mb-3">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">dr_amt</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control"  name="dr_amt" required>
+        </div>
+    </div>
+
      <div class="row mb-3">
         <label for="colFormLabel" class="col-sm-2 col-form-label">dept</label>
         <div class="col-sm-10">
            <input type="hidden" name="dept" id="dept">
-          <input type="text"  class="form-control"  list="branchdata" id="branch-show" name="branch-show" required/>
+           <input type="text"  class="form-control"  list="branchdata" id="branch-show" name="branch-show" required/>
         </div>
     </div>
 
@@ -39,6 +55,12 @@
 <datalist id="branchdata">
     {% for branch in branches %}
      <option data-value="{{branch.branch_id}}" value="{{branch.branch_name}}">
+    {% endfor %}
+</datalist>
+
+<datalist id="bankdata">
+    {% for bank in banks %}
+     <option data-value="{{bank.bank_short}}" value="{{bank.bank_short}}">
     {% endfor %}
 </datalist>
 
